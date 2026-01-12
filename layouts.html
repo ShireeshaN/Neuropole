@@ -1,0 +1,450 @@
+<!-- 1st layout  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Thumbnail Carousel</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, sans-serif;
+}
+
+body{
+  background:#000;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* FRAME */
+.frame{
+  width:95%;
+  height:90vh;
+  border:4px solid #fff;
+  border-radius:20px;
+  padding:10px;
+}
+
+.container{
+  height:100%;
+  display:flex;
+  background:#111;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+/* LEFT BAR */
+.left-bar{
+  width:70px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.left-bar .vertical{
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  font-weight:600;
+}
+
+.menu span{
+  display:block;
+  width:20px;
+  height:2px;
+  background:#000;
+  margin:4px 0;
+}
+
+.socials{
+  font-size:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* HERO */
+.hero{
+  flex:1;
+  position:relative;
+  padding:60px;
+  color:#fff;
+  background-size:cover;
+  background-position:center;
+  transition:background-image 0.8s ease-in-out;
+}
+
+.case{
+  font-size:12px;
+  opacity:0.7;
+}
+
+.hero h1{
+  font-size:64px;
+  margin-top:140px;
+  line-height:1.1;
+  animation:textAnim 0.8s ease;
+}
+
+@keyframes textAnim{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.counter{
+  position:absolute;
+  bottom:40px;
+  left:60px;
+  font-size:12px;
+  opacity:0.6;
+}
+
+/* RIGHT PANEL */
+.right{
+  width:320px;
+  background:#1b1b1b;
+  color:#fff;
+  padding:40px 30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.details h4{
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:20px;
+}
+
+.details p{
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:8px;
+}
+
+.details a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid #fff;
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* THUMBNAIL WRAPPER */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 5px;
+}
+
+/* hide scrollbar */
+.thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnails img {
+  flex: 0 0 90px; /* IMPORTANT: fixed width */
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.thumbnails img.active {
+  opacity: 1;
+  transform: scale(1.05);
+  outline: 2px solid #fff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="frame">
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="left-bar">
+      <div class="vertical">INTERIOR</div>
+      <div class="menu">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="socials">
+        <span>FB</span>
+        <span>TW</span>
+        <span>IG</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero" id="hero">
+      <span class="case">Case Study</span>
+      <h1 id="title"></h1>
+      <div class="counter" id="counter"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="details">
+        <h4>Project Details</h4>
+        <p>New York</p>
+        <p>2018</p>
+        <p>Exterior & Interior</p>
+        <a href="#">See Case Study</a>
+      </div>
+
+      <div class="thumbnails" id="thumbs"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const slides = [
+  {
+    title: "Classic <br> & Modern",
+    image: "https://images.unsplash.com/photo-1549187774-b4e9b0445b41"
+  },
+  {
+    title: "Minimal <br> Interior",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+  },
+  {
+    title: "Luxury <br> Living",
+    image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+  },
+  {
+    title: "Urban <br> Design",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+  }
+];
+
+let index = 0;
+const hero = document.getElementById("hero");
+const title = document.getElementById("title");
+const counter = document.getElementById("counter");
+const thumbs = document.getElementById("thumbs");
+
+/* CREATE THUMBNAILS */
+slides.forEach((s,i)=>{
+  const img = document.createElement("img");
+  img.src = s.image;
+  img.onclick = ()=>{ index=i; update(); };
+  thumbs.appendChild(img);
+});
+
+const thumbImgs = document.querySelectorAll(".thumbnails img");
+
+function update(){
+  hero.style.backgroundImage = `url(${slides[index].image})`;
+
+  title.innerHTML = slides[index].title;
+  title.style.animation = "none";
+  title.offsetHeight;
+  title.style.animation = "textAnim 0.8s ease";
+
+  counter.innerHTML = `0${index+1} / 0${slides.length}`;
+
+  thumbImgs.forEach((t,i)=>{
+    t.classList.toggle("active", i===index);
+  });
+
+  /* AUTO SCROLL ACTIVE THUMBNAIL */
+  thumbImgs[index].scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest"
+  });
+}
+
+
+/* AUTO PLAY */
+setInterval(()=>{
+  index = (index+1)%slides.length;
+  update();
+},6000);
+
+update();
+</script>
+
+</body>
+</html>
+
+<!-- 2nd layout  -->
+
+<section class="neuropole-wrapper">
+
+  <!-- LEFT IMAGE -->
+  <div class="neuropole-image">
+    <img id="featureImage" src="images/smartpole/sp1.png" alt="Feature Image">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="neuropole-content">
+
+    <div class="feature active" data-image="images/smartpole/sp1.png">
+      <span>01</span>
+      <h2>Smart Adaptive Lighting</h2>
+      <p>Automatically adjusts brightness based on traffic and environment.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>02</span>
+      <h2>Public WiFi</h2>
+      <p>High-speed connectivity enabling smart city services.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>03</span>
+      <h2>EV Charging</h2>
+      <p>Integrated EV charging solution for urban mobility.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>04</span>
+      <h2>AI CCTV Surveillance</h2>
+      <p>Real-time AI monitoring for enhanced safety.</p>
+    </div>
+
+    <!-- Add till 16 features same way -->
+
+  </div>
+</section>
+
+<style>
+  /* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #fff;
+} */
+
+.neuropole-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* LEFT IMAGE */
+.neuropole-image {
+  position: sticky;
+  top: 0;
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neuropole-image img {
+  height: 520px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* RIGHT CONTENT */
+.neuropole-content {
+  width: 55%;
+  padding: 100px 60px;
+}
+
+/* EACH FEATURE */
+.feature {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.feature.active {
+  opacity: 1;
+}
+
+.feature span {
+  color: #4fc3f7;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.feature h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.feature p {
+  font-size: 18px;
+  max-width: 420px;
+  opacity: 0.85;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .neuropole-wrapper {
+    flex-direction: column;
+  }
+
+  .neuropole-image {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .neuropole-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .feature {
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+}
+
+</style>
+
+<script>
+const features = document.querySelectorAll('.feature');
+const image = document.getElementById('featureImage');
+
+window.addEventListener('scroll', () => {
+  features.forEach(feature => {
+    const rect = feature.getBoundingClientRect();
+    const center = window.innerHeight / 2;
+
+    if (rect.top < center && rect.bottom > center) {
+      feature.classList.add('active');
+
+      const newImg = feature.dataset.image;
+      if (!image.src.includes(newImg)) {
+        image.style.opacity = 0;
+        setTimeout(() => {
+          image.src = newImg;
+          image.style.opacity = 1;
+        }, 200);
+      }
+
+    } else {
+      feature.classList.remove('active');
+    }
+  });
+});
+</script>
+
+
+<!-- 3rd layout  -->
+
