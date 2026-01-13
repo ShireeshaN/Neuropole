@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfume Editorial Layout</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<section class="editorial-grid">
+
+  <!-- BLOCK 1 -->
+  <div class="block">
+    <div class="image-area">
+      <img src="images/img_2.jpg" class="bottle" />
+      <img src="images/img_2.jpg" class="cap" />
+    </div>
+    
+  </div>
+
+  <!-- BLOCK 2 -->
+  <div class="block">
+    <div class="content-area">
+      <h4>FRÉJO</h4>
+      <h2>MADE IN</h2>
+      <p>
+        Designed and bottled with precision craftsmanship,
+        delivering a timeless sensory experience.
+      </p>
+
+      <div class="meta">
+        <div>
+          <span>ORIGIN</span>
+          <p>FRANCE</p>
+        </div>
+        <div>
+          <span>EST.</span>
+          <p>1991</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-area light">
+    </div>
+  </div>
+
+  <!-- BLOCK 3 -->
+  <div class="block">
+    <div class="content-area">
+      <h4>FRÉJO</h4>
+      <h2>ESSENCE</h2>
+      <p>
+        Clean geometry and muted tones meet luxurious composition
+        and lasting performance.
+      </p>
+
+      <div class="meta">
+        <div>
+          <span>STYLE</span>
+          <p>MINIMAL</p>
+        </div>
+        <div>
+          <span>WEAR</span>
+          <p>DAILY</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-area light">
+    </div>
+  </div>
+
+  <!-- BLOCK 4 -->
+  <div class="block">
+    <div class="image-area">
+      <img src="images/img_2.jpg" class="bottle" />
+      <img src="images/img_2.jpg" class="cap" />
+    </div>
+   
+  </div>
+
+</section>
+
+</body>
+</html>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  padding: 40px;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+}
+
+/* BLOCK */
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ededed;
+  min-height: 380px;
+}
+
+/* IMAGE AREA */
+.image-area {
+  position: relative;
+  background: linear-gradient(180deg, #e5e5e5, #dcdcdc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-area.light {
+  background: #efefef;
+}
+
+/* PRODUCT */
+.bottle {
+  width: 160px;
+  z-index: 2;
+}
+
+.cap {
+  width: 60px;
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  z-index: 1;
+}
+
+/* CONTENT */
+.content-area {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-area h4 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.content-area h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.content-area p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 260px;
+}
+
+/* META */
+.meta {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.meta span {
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.meta p {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #111;
+}
+
+</style>

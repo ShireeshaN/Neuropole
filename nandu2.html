@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional 4 Box Hover Layout</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", Arial, sans-serif;
+}
+
+body{
+  background:#e6e6e6;
+}
+
+/* CONTAINER */
+.container{
+  width:100%;
+  height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+}
+
+/* CARD */
+.card{
+  position:relative;
+  overflow:hidden;
+}
+
+/* IMAGE */
+.front{
+  position:absolute;
+  inset:0;
+  background-image:url("images/img_2.jpg"); /* CHANGE IMAGE PATH */
+  background-size:200% 200%;
+  transition:transform 1.2s cubic-bezier(0.19,1,0.22,1);
+}
+
+/* IMAGE SPLIT */
+.c1 .front{ background-position:left top; }
+.c2 .front{ background-position:right top; }
+.c3 .front{ background-position:left bottom; }
+.c4 .front{ background-position:right bottom; }
+
+/* DARK GLASS OVERLAY */
+.front::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0);
+  transition:background 0.8s ease;
+}
+
+/* TEXT LAYER */
+.back{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+
+.back h2{
+  color:#fff;
+  font-size:36px;
+  letter-spacing:6px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.7s cubic-bezier(0.19,1,0.22,1);
+}
+
+/* HOVER EFFECT */
+.card:hover .front{
+  transform:scale(1.06);
+}
+
+.card:hover .front::after{
+  background:rgba(0,0,0,0.55);
+}
+
+.card:hover .back h2{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<section class="container">
+
+  <div class="card c1">
+    <div class="front"></div>
+    <div class="back"><h2>SHOP</h2></div>
+  </div>
+
+  <div class="card c2">
+    <div class="front"></div>
+    <div class="back"><h2>RENT</h2></div>
+  </div>
+
+  <div class="card c3">
+    <div class="front"></div>
+    <div class="back"><h2>CARE</h2></div>
+  </div>
+
+  <div class="card c4">
+    <div class="front"></div>
+    <div class="back"><h2>CONTACT</h2></div>
+  </div>
+
+</section>
+
+</body>
+</html>
