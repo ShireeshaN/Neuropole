@@ -1,143 +1,174 @@
-<section class="faq-section">
-  <h2 class="faq-title">FAQ</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Steps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <div class="faq-item">
-    <button class="faq-question">
-      Can I take just one consultation?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>Yes, you can book a single consultation without committing to a long-term program.</p>
+<section class="card">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Our Steps</h2>
+    <p>Great Title is Here</p>
+  </div>
+
+  <!-- TOP CANVAS -->
+  <div class="canvas">
+
+    <!-- LINES -->
+    <div class="line l1"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
+    <div class="line l4"></div>
+
+    <!-- CIRCLES -->
+    <div class="circle c1">1</div>
+    <div class="circle c2">2</div>
+    <div class="circle c3">3</div>
+    <div class="circle c4">4</div>
+
+  </div>
+
+  <!-- TEXT -->
+  <div class="bottom">
+    <div>
+      <h4>Descriptions Here</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+      <h4>Descriptions Here</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+      <h4>Descriptions Here</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+      <h4>Descriptions Here</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
 
-  <div class="faq-item">
-    <button class="faq-question">
-      If I am a complete beginner, is mentorship right for me?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>Absolutely. The mentorship is structured to support beginners from the basics.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">
-      How often can I message my mentor?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>You can message your mentor during agreed working hours with reasonable frequency.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">
-      Will the mentor help me find a job?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>The mentor will guide you with portfolio reviews, interviews, and job strategies.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">
-      Do you have courses for designers?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>Yes, we offer specialized courses tailored for designers at different levels.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">
-      What if I don’t match well with the mentor?
-      <span class="icon">+</span>
-    </button>
-    <div class="faq-answer">
-      <p>You can request a mentor change to ensure the best learning experience.</p>
-    </div>
-  </div>
 </section>
 
-
 <style>
-  .faq-section {
-  max-width: 900px;
-  margin: 80px auto;
-  font-family: Arial, sans-serif;
-}
-
-.faq-title {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.faq-item {
-  border-top: 1px solid #ccc;
-}
-
-.faq-item:last-child {
-  border-bottom: 1px solid #ccc;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 20px 0;
-  font-size: 16px;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.faq-question .icon {
-  font-size: 22px;
-  transition: transform 0.3s ease;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.3s ease;
-  opacity: 0;
-}
-
-.faq-answer p {
+  * {
   margin: 0;
-  padding: 0 0 20px 0;
-  color: #555;
-  font-size: 15px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #fff;
+  padding: 40px;
+}
+
+/* CARD */
+.card {
+  width: 1200px;                 /* fixed canvas like screenshot */
+  background: #f5f5f3;
+  border-radius: 28px;
+  padding: 50px 60px 60px;
+  margin: auto;
+}
+
+/* HEADER */
+.header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.header p {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+/* CANVAS */
+.canvas {
+  position: relative;
+  height: 220px;
+  margin-top: 40px;
+}
+
+/* LINES (PIXEL POSITIONS) */
+.line {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 110px;
+  background: #9c9c9c;
+}
+
+/* exact X positions */
+.l1 { left: 320px; transform: rotate(-22deg); transform-origin: top right; }
+.l2 { left: 600px; }
+.l3 { left: 680px; }
+.l4 { left: 760px; }
+
+/* CIRCLES */
+.circle {
+  position: absolute;
+  top: 95px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* exact circle positions */
+.c1 {
+  left: 250px;                  /* isolated */
+  background: #dddddd;
+}
+
+.c2 {
+  left: 565px;
+  background: #a6a6a6;
+}
+
+.c3 {
+  left: 645px;
+  background: #5c5c60;
+}
+
+.c4 {
+  left: 725px;
+  background: #1f1f24;
+}
+
+/* TEXT */
+.bottom {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.bottom h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.bottom p {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #7a7a7a;
   line-height: 1.6;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 200px;
-  opacity: 1;
-}
-
-.faq-item.active .icon {
-  transform: rotate(45deg); /* + becomes − */
 }
 
 </style>
 
-<script>
-  document.querySelectorAll(".faq-question").forEach(button => {
-    button.addEventListener("click", () => {
-      const item = button.parentElement;
-
-      document.querySelectorAll(".faq-item").forEach(faq => {
-        if (faq !== item) faq.classList.remove("active");
-      });
-
-      item.classList.toggle("active");
-    });
-  });
-</script>
+</body>
+</html>

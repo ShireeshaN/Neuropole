@@ -852,3 +852,245 @@ reveals.forEach(r=>observer.observe(r));
     });
   });
 </script>
+
+
+
+<!-- 86 features layout -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartPole Features</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="feature">
+
+  <!-- IMAGE -->
+  <div class="image-box">
+    <div class="image-layer"></div>
+    <div class="counter" id="counter">— 01</div>
+  </div>
+
+  <!-- TEXT -->
+  <div class="content">
+    <span class="tag">SMARTPOLE FEATURE</span>
+    <h1 id="title"></h1>
+    <p id="desc"></p>
+
+    <!-- MANUAL NAV (TEXT KINDA) -->
+    <div class="nav-mobile">
+      <button id="prev" class="text-black">‹</button>
+      <button id="next" class="text-black">›</button>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* DESKTOP */
+.feature {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-box {
+  width: 55%;
+  position: relative;
+}
+
+.image-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.counter {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.content {
+  width: 45%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #4c5cff;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 480px;
+}
+
+.nav-mobile {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-mobile button {
+  background: none;        /* ❌ no background */
+  border: none;            /* ❌ no border */
+  padding: 0;              /* clean */
+  font-size: 32px;         /* icon size */
+  cursor: pointer;
+  color: #000;             /* ✅ black icons */
+  line-height: 1;
+}
+
+/* Optional: subtle hover */
+.nav-mobile button:hover {
+  opacity: 0.6;
+}
+
+
+/* TEXT ANIMATION */
+.fade {
+  animation: fadeUp .6s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 MOBILE — FINAL FIX */
+@media (max-width: 900px) {
+
+  .feature {
+    flex-direction: column;   /* 👈 THIS fixes side-by-side */
+    height: auto;
+  }
+
+  .image-box {
+    width: 100%;
+    height: 45vh;
+    position: relative;
+  }
+
+  .content {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .nav-mobile {
+    display: flex;  /* arrows only below text */
+  }
+}
+
+</style>
+
+<script>
+  const features = [
+  {
+    title: "Smart Lighting Control",
+    desc: "Adaptive LED lighting that saves energy and improves road safety.",
+    image: "images/img_6.jpg"
+  },
+  {
+    title: "Environmental Monitoring",
+    desc: "Air quality, noise and weather sensors for smart city analytics.",
+    image: "images/img_7.jpg"
+  },
+  {
+    title: "Integrated Surveillance",
+    desc: "AI-enabled cameras for traffic and public safety.",
+    image: "images/img_8.jpg"
+  }
+];
+
+let i = 0;
+let locked = false;
+
+const img = document.querySelector(".image-layer");
+const title = document.getElementById("title");
+const desc = document.getElementById("desc");
+const counter = document.getElementById("counter");
+const content = document.querySelector(".content");
+
+function showFeature(index) {
+  if (locked) return;
+  locked = true;
+
+  const f = features[index];
+
+  content.classList.remove("fade");
+  void content.offsetWidth;
+  content.classList.add("fade");
+
+  title.textContent = f.title;
+  desc.textContent = f.desc;
+
+  img.style.opacity = 0;
+
+  setTimeout(() => {
+    img.style.backgroundImage = `url(${f.image})`;
+    img.style.opacity = 1;
+    img.style.transform = "scale(1.08)";
+    counter.textContent = `— ${String(index + 1).padStart(2, "0")}`;
+    locked = false;
+  }, 400);
+}
+
+document.getElementById("next").onclick = () => {
+  i = (i + 1) % features.length;
+  showFeature(i);
+};
+
+document.getElementById("prev").onclick = () => {
+  i = (i - 1 + features.length) % features.length;
+  showFeature(i);
+};
+
+showFeature(i);
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
