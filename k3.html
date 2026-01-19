@@ -1,0 +1,143 @@
+<section class="faq-section">
+  <h2 class="faq-title">FAQ</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I take just one consultation?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, you can book a single consultation without committing to a long-term program.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      If I am a complete beginner, is mentorship right for me?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Absolutely. The mentorship is structured to support beginners from the basics.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How often can I message my mentor?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>You can message your mentor during agreed working hours with reasonable frequency.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Will the mentor help me find a job?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>The mentor will guide you with portfolio reviews, interviews, and job strategies.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do you have courses for designers?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, we offer specialized courses tailored for designers at different levels.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What if I don’t match well with the mentor?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>You can request a mentor change to ensure the best learning experience.</p>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border-top: 1px solid #ccc;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question .icon {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 0 20px 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg); /* + becomes − */
+}
+
+</style>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = button.parentElement;
+
+      document.querySelectorAll(".faq-item").forEach(faq => {
+        if (faq !== item) faq.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+</script>

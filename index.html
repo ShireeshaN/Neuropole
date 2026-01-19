@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Neuropole</title>
 </head>
+
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div class="site-wrap">
@@ -43,40 +44,19 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <!-- <div class="top-bar py-2" id="home-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-lg-right order-lg-2">
-            <ul class="social-media m-0 p-0">
-              <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-md-6 text-center text-lg-left order-lg-1">
-            <p class="mb-0 d-inline-flex">
-              <span class="mr-3"><a href="tel://#" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+1 234 5678 9101</span></a></span>
-              <span><a href="tel://#" class="d-flex align-items-center"><span class="icon-envelope mr-2"></span><span>info@domain.com</span></a></span>
-            </p>
-          </div>
-
-        </div>
-      </div> 
-    </div> -->
-
+  
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
         <div class="row align-items-center">
 
-         <div class="col-11 col-xl-2">
-  <h1 class="mb-0 site-logo">
-    <a href="index.html" class="mb-0">
-      <img src="images/logo2.png" alt="Your Company Logo" class="site-logo-img">
-    </a>
-  </h1>
-</div>
+          <div class="col-11 col-xl-2">
+            <h1 class="mb-0 site-logo">
+              <a href="index.html" class="mb-0">
+                <img src="images/logo2.png" alt="Your Company Logo" class="site-logo-img">
+              </a>
+            </h1>
+          </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -87,32 +67,28 @@
                 <li>
                   <a href="features.html" class="nav-link">Our Features</a>
                 </li>
-                <!-- <li class="has-children">
-                  <a href="#about-section" class="nav-link">About</a>
-                  <ul class="dropdown">
-                    <li><a href="#about-section">Specialties</a></li>
-                    <li><a href="#team-section">Our Team</a></li>
-                  </ul>
-                </li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li> -->
+               
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
               </ul>
             </nav>
           </div>
 
 
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
+              class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
         </div>
       </div>
-      
+
     </header>
 
-
-<div class="neuropolebans">
+<!-- banner start -->
+   <div class="neuropolebans">
   <div class="container">
-    <div class="row align-items-start">
-      <div class="col-md-10 col-lg-8">
+    <div class="row align-items-center">
+      
+      <!-- LEFT CONTENT -->
+      <div class="col-md-7">
         <h1>
           Building the Future of <span class="rotating-words">Neuroscience</span>
         </h1>
@@ -120,46 +96,31 @@
           Advancing neuroscience with AI-powered innovation.
         </p>
       </div>
+
+      <!-- RIGHT POLE IMAGE -->
+      <div class="col-md-5 text-end pole-wrap">
+        <img src="images/smartpole/poles.png" alt="NeuroPole" class="pole-img">
+      </div>
+
     </div>
   </div>
 </div>
-
-<style>
-/* =========================
+    <style>
+    /* =========================
    NeuroPole Banner
 ========================= */
 
 .neuropolebans {
-  background-image: url("images/hero-bg.jpg"); /* your image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   min-height: 100vh;
-  padding-top: 250px;
-  padding-bottom: 80px;
-
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Overlay */
-.neuropolebans::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-/* Content above overlay */
-.neuropolebans .container {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: rgb(144, 142, 142); /* NO background */
+  overflow: hidden;
 }
 
 /* Text styles */
 .neuropolebans h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.2;
@@ -167,972 +128,1982 @@
 }
 
 .neuropolebans p {
-  font-size: 0.9rem;
-  max-width: 600px;
-  color: #f1f1f1;
+  font-size: 1rem;
+  max-width: 520px;
+  color: #dddddd;
 }
 
-/* Rotating words effect */
+/* Rotating words */
 .rotating-words {
   display: inline-block;
-  opacity: 1;
-  transition: opacity 0.8s ease-in-out; /* smooth fade */
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Right-side pole */
+.pole-wrap {
+  position: relative;
+}
+
+.pole-img {
+  max-height: 85vh;
+  width: auto;
+  object-fit: contain;
 }
 
 /* =========================
-   MOBILE VIEW (FIXED)
+   MOBILE VIEW
 ========================= */
 @media (max-width: 768px) {
 
   .neuropolebans {
-    min-height: 95vh;
-    padding-top: 200px;
-    padding-bottom: 90px;
-    background-position: center top;
+    padding: 120px 0 80px;
+  }
+
+  .pole-wrap {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .pole-img {
+    max-height: 60vh;
   }
 
   .neuropolebans h1 {
-    font-size: 1.9rem;
-    line-height: 1.3;
-  }
-
-  .neuropolebans p {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 }
 
-/* Extra safety */
-body {
-  overflow-x: hidden;
+    </style>
+    <script>
+       const words = ["Neuroscience", "Neuro Technology", "AI Intelligence"];
+  let index = 0;
+  const wordContainer = document.querySelector('.rotating-words');
+
+  wordContainer.textContent = words[0];
+
+  setInterval(() => {
+    index = (index + 1) % words.length;
+    wordContainer.style.opacity = 0;
+    setTimeout(() => {
+      wordContainer.textContent = words[index];
+      wordContainer.style.opacity = 1;
+    }, 500);
+  }, 3000);
+    </script>
+
+<!-- banner end -->
+
+
+
+
+<!-- about start -->
+<div class="whoweare">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>We Are..</h1>
+    <!-- <p>Neuropole</p> -->
+  </div>
+
+  <!-- Hanging Balls -->
+  <div class="hanging">
+    <div class="ball one"><div class="circle">1</div></div>
+    <div class="ball two"><div class="circle">2</div></div>
+    <div class="ball three"><div class="circle">3</div></div>
+    <div class="ball four"><div class="circle">4</div></div>
+  </div>
+
+  <!-- Content Boxes -->
+  <div class="content">
+    <div class="box">
+      <h3>Vision</h3>
+      <p>Building intelligent city infrastructure that seamlessly connects technology and sustainability.</p>
+    </div>
+    <div class="box">
+      <h3>Mission</h3>
+      <p>Delivering smart poles with EV charging, lighting, sensing and communication solutions.</p>
+    </div>
+    <div class="box">
+      <h3>Integration</h3>
+      <p>Combining IoT, AI, cameras, displays, Wi-Fi and power systems into one platform.</p>
+    </div>
+    <div class="box">
+      <h3>Impact</h3>
+      <p>Creating safer, greener and smarter cities for future generations.</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+/* ======================
+   Whoweare Section
+====================== */
+.whoweare {
+  width: 100%;
+  padding: 70px 80px;
+  position: relative;
+  background: #f5f5f5;
+  color: #111;
+  font-family: Poppins, sans-serif;
+  overflow: hidden;
+}
+
+/* ===== Header ===== */
+.whoweare .header h1 {
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.whoweare .header p {
+  margin-top: 6px;
+  color: #777;
+}
+
+/* ===== Hanging Balls (Desktop) ===== */
+.whoweare .hanging {
+  position: absolute;
+  top: 90px;
+  right: 120px;
+  width: 520px;
+  height: 260px;
+}
+
+.whoweare .ball {
+  position: absolute;
+  text-align: center;
+}
+
+.whoweare .circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Ball Positions */
+.whoweare .ball.one {
+  left: -130px;
+  top: 90px;
+}
+
+.whoweare .ball.one::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 200px;
+  background: #bdbdbd;
+  top: -200px;
+  left: 50%;
+  transform: rotate(22deg);
+  transform-origin: bottom;
+}
+
+.whoweare .ball.one .circle { background: #e0e0e0; color: #666; }
+
+.whoweare .ball.two { left: 160px; top: 90px; }
+.whoweare .ball.three { left: 260px; top: 90px; }
+.whoweare .ball.four { left: 360px; top: 90px; }
+
+.whoweare .ball.two::before,
+.whoweare .ball.three::before,
+.whoweare .ball.four::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 200px;
+  background: #bdbdbd;
+  top: -200px;
+  left: 50%;
+}
+
+.whoweare .ball.two .circle { background: #9e9e9e; }
+.whoweare .ball.three .circle { background: #5f5f63; }
+.whoweare .ball.four .circle { background: #111; }
+
+/* ===== Content Grid (Desktop) ===== */
+.whoweare .content {
+  margin-top: 260px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.whoweare .box h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.whoweare .box p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ======================
+   Responsive: Tablet
+====================== */
+@media(max-width:900px){
+  .whoweare {
+    padding: 40px 20px 24px;
+  }
+
+  .whoweare .hanging {
+    position: relative;
+    top: 20px;
+    right: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .whoweare .ball {
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .whoweare .ball::before {
+    height: 50px !important;
+    top: -50px !important;
+    transform: none !important;
+  }
+
+  .whoweare .content {
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* ======================
+   Responsive: Mobile
+====================== */
+@media(max-width:520px){
+  .whoweare {
+    padding: 20px 16px 16px; /* Compact wrapper height */
+  }
+
+  .whoweare .header h1 {
+    font-size: 30px;
+  }
+
+  .whoweare .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .whoweare .ball::before {
+    height: 36px !important;
+    top: -36px !important;
+  }
+
+  .whoweare .content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .whoweare .box p {
+    font-size: 13px;
+  }
 }
 </style>
 
-<script>
-const words = ["Neuroscience", "Neuro Technology", "AI Intelligence"];
-let index = 0;
-const wordContainer = document.querySelector('.rotating-words');
+<!-- about end -->
 
-// Initialize first word
-wordContainer.textContent = words[0];
+    <!-- features applications start -->
+    <div class="allfeatureappli-section">
 
-// Change words every 3 seconds
-setInterval(() => {
-  index = (index + 1) % words.length;
-  // Fade out, change word, fade in
-  wordContainer.style.opacity = 0;
-  setTimeout(() => {
-    wordContainer.textContent = words[index];
-    wordContainer.style.opacity = 1;
-  }, 500); // fade duration matches CSS transition
-}, 3000); // 3 seconds per word
-</script>
+      <style>
+       .allfeatureappli-section {
+  font-family: "Inter", sans-serif;
+  background: #f6f8fb;
+  color: #0b1a2a;
+  width: 100%;
+}
+
+.allfeatureappli-wrapper {
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* IMAGE SIDE */
+.allfeatureappli-image {
+  position: sticky;
+  top: 0;
+  width: 47%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e6ebf1;
+}
+
+.allfeatureappli-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
+.allfeatureappli-image img.active-img {
+  opacity: 1;
+  z-index: 2;
+}
+
+.allfeatureappli-image img.next-img {
+  z-index: 1;
+}
+
+/* CONTENT SIDE */
+.allfeatureappli-content {
+  width: 55%;
+  padding: 120px 80px;
+  position: relative;
+}
+
+.allfeatureappli-feature {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.25;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.allfeatureappli-feature.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.allfeatureappli-feature span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #3e3f40;
+  font-weight: 500;
+}
+
+.allfeatureappli-feature h2 {
+  font-size: 42px;
+  margin: 14px 0;
+  font-weight: 500;
+}
+
+/* 🔥 BULLET LIST (REPLACES <p>) */
+.allfeatureappli-feature ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  max-width: 520px;
+}
+
+.allfeatureappli-feature ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4a5b6c;
+}
+
+/* narrow professional circle */
+.allfeatureappli-feature ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border: 1.4px solid #9aa6b2;
+  border-radius: 50%;
+}
+
+/* active feature emphasis */
+.allfeatureappli-feature.active ul li {
+  color: #2f3b46;
+}
+
+/* NAV */
+.allfeatureappli-nav {
+  position: sticky;
+  bottom: 32px;
+  margin-left: auto;
+  border-radius: 12px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 6px;
+  z-index: 10;
+}
+
+.allfeatureappli-nav button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #dbe3ec;
+  background: #ffffff;
+  color: #464748;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.allfeatureappli-nav button:hover {
+  background: #f0f6ff;
+  transform: translateY(-1px);
+}
+
+.allfeatureappli-count {
+  font-size: 11px;
+  font-weight: 500;
+  color: #4a5b6c;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .allfeatureappli-wrapper {
+    flex-direction: column;
+  }
+
+  .allfeatureappli-image {
+    width: 100%;
+    height: 45vh;
+    border-right: none;
+    border-bottom: 1px solid #e6ebf1;
+  }
+
+  .allfeatureappli-content {
+    width: 100%;
+    padding: 60px 24px 120px;
+  }
+
+  .allfeatureappli-feature {
+    min-height: 62vh;
+  }
+
+  .allfeatureappli-feature h2 {
+    font-size: 32px;
+  }
+
+  .allfeatureappli-feature ul li {
+    font-size: 14px;
+  }
+
+  .allfeatureappli-nav {
+    flex-direction: row;
+    bottom: 20px;
+    margin: 40px auto 0;
+  }
+}
+
+      </style>
+
+      <div class="allfeatureappli-wrapper">
+
+        <!-- IMAGE SIDE with 2 layers for smooth crossfade -->
+        <div class="allfeatureappli-image">
+          <img id="allfeatureappliImage1" src="images/smartpole/sp3.png" class="active-img">
+          <img id="allfeatureappliImage2" src="" class="next-img">
+        </div>
+
+        <!-- CONTENT SIDE -->
+       <div class="allfeatureappli-content">
+
+<!-- 01 -->
+<div class="allfeatureappli-feature active" data-image="images/smartpole/sp3.png">
+<span>01</span>
+<h2>EV Charging</h2>
+<ul>
+<li>Efficient electric vehicle charging</li>
+<li>Reduces fossil fuel dependency</li>
+<li>Fast charging support</li>
+<li>Solar & wind energy integration</li>
+<li>QR-based smart payment</li>
+<li>Eco-friendly urban mobility</li>
+<li>Public & private charging support</li>
+<li>Reduces air and noise pollution</li>
+<li>Compatible with multiple EV models</li>
+<li>Enhances city sustainability image</li>
+</ul>
+</div>
+
+<!-- 02 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>02</span>
+<h2>Emergency SOS Alert</h2>
+<ul>
+<li>Instant emergency assistance</li>
+<li>Real-time alerts to control center</li>
+<li>Voice & push-button activation</li>
+<li>GPS-enabled location tracking</li>
+<li>Police, fire & ambulance integration</li>
+<li>Operational during power outages</li>
+<li>Audio & visual signaling</li>
+<li>AI-based abnormal activity detection</li>
+<li>Remote monitoring via ICCC</li>
+</ul>
+</div>
+
+<!-- 03 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>03</span>
+<h2>Wired Charging</h2>
+<ul>
+<li>Fast and stable EV charging</li>
+<li>Safe plug-and-charge system</li>
+<li>Weather & vandal resistant sockets</li>
+<li>Real-time power monitoring</li>
+<li>IoT-based energy management</li>
+<li>Supports cars, scooters & e-bikes</li>
+<li>Load-balanced charging points</li>
+<li>Integrated payment metering</li>
+<li>Auto shutdown after full charge</li>
+<li>Reduced charging downtime</li>
+</ul>
+</div>
+
+<!-- 04 -->
+<div class="allfeatureappli-feature" data-image="images/img_10.jpg">
+<span>04</span>
+<h2>Wireless Charging</h2>
+<ul>
+<li>Contactless EV charging technology</li>
+<li>Convenient public usage</li>
+<li>No connector wear & tear</li>
+<li>Safe and user-friendly operation</li>
+<li>Compatible EV model support</li>
+<li>IoT monitoring & billing</li>
+<li>Futuristic infrastructure design</li>
+<li>Automatic alignment charging</li>
+<li>Minimal human intervention</li>
+<li>Ideal for fleet & taxi hubs</li>
+</ul>
+</div>
+
+<!-- 05 -->
+<div class="allfeatureappli-feature" data-image="images/img_5.jpg">
+<span>05</span>
+<h2>Air Quality Sensor</h2>
+<ul>
+<li>PM2.5, PM10, CO₂, NO₂ monitoring</li>
+<li>Real-time AQI data</li>
+<li>Supports pollution control planning</li>
+<li>IoT data transmission to ICCC</li>
+<li>AI-based pollution prediction</li>
+<li>Threshold-based alerts</li>
+<li>Citizen awareness enablement</li>
+<li>Smart pole integration</li>
+<li>Data-driven policy support</li>
+<li>Low maintenance lifecycle</li>
+</ul>
+</div>
+
+<!-- 06 -->
+<div class="allfeatureappli-feature" data-image="images/img_5.jpg">
+<span>06</span>
+<h2>Air Quality Screen</h2>
+<ul>
+<li>Live AQI display for citizens</li>
+<li>Environmental database integration</li>
+<li>Customizable LED visualization</li>
+<li>Bright & energy-efficient display</li>
+<li>Weather & vandal resistant</li>
+<li>Automatic brightness control</li>
+<li>Public alerts & messages</li>
+<li>Improves city transparency</li>
+<li>Multi-sensor connectivity</li>
+<li>Environmental awareness promotion</li>
+</ul>
+</div>
+
+<!-- 07 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>07</span>
+<h2>Street Lighting</h2>
+<ul>
+<li>Smart LED lighting system</li>
+<li>Daylight sensor auto on/off</li>
+<li>Up to 60% energy savings</li>
+<li>Solar integration option</li>
+<li>Centralized remote control</li>
+<li>Motion-based dimming</li>
+<li>RGB lighting for events</li>
+<li>Low maintenance & long life</li>
+<li>IoT group scheduling</li>
+</ul>
+</div>
+
+<!-- 08 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>08</span>
+<h2>PA Loudspeaker</h2>
+<ul>
+<li>Emergency & public announcements</li>
+<li>High clarity audio output</li>
+<li>Voice alert support</li>
+<li>ICCC & mobile command link</li>
+<li>Weatherproof & tamper resistant</li>
+<li>Community communication support</li>
+<li>Multi-language announcements</li>
+<li>Scheduled & manual broadcast</li>
+<li>Disaster evacuation usage</li>
+</ul>
+</div>
+
+<!-- 09 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>09</span>
+<h2>Power Generation System</h2>
+<ul>
+<li>Solar & wind hybrid integration</li>
+<li>Self-sustainable smart pole</li>
+<li>Reduced grid dependency</li>
+<li>Smart battery storage</li>
+<li>Powers lights & sensors</li>
+<li>Energy monitoring system</li>
+<li>Low operating cost</li>
+<li>Outage resilience</li>
+<li>Remote energy management</li>
+<li>City energy resilience support</li>
+</ul>
+</div>
+
+<!-- 10 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>10</span>
+<h2>RGB Pixel LED Screen</h2>
+<ul>
+<li>Full-color digital display</li>
+<li>Ads, alerts & traffic updates</li>
+<li>Image, video & text support</li>
+<li>High daylight visibility</li>
+<li>Central CMS control</li>
+<li>Advertisement revenue generation</li>
+<li>Air & weather data display</li>
+<li>IoT content scheduling</li>
+<li>Energy efficient operation</li>
+<li>Smart city branding</li>
+</ul>
+</div>
+
+<!-- 11 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>11</span>
+<h2>Motion Detector</h2>
+<ul>
+<li>Human & vehicle detection</li>
+<li>Automatic light & camera trigger</li>
+<li>Power consumption reduction</li>
+<li>AI surveillance integration</li>
+<li>Unusual activity alerts</li>
+<li>Perimeter security support</li>
+<li>Sensitivity adjustment</li>
+<li>Predictive safety analytics</li>
+<li>Day & night operation</li>
+<li>Energy optimization</li>
+</ul>
+</div>
+
+<!-- 12 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>12</span>
+<h2>Wi-Fi Hotspot</h2>
+<ul>
+<li>Public wireless internet access</li>
+<li>High-speed connectivity</li>
+<li>Smart city digital backbone</li>
+<li>Telecom provider integration</li>
+<li>Citizen digital inclusion</li>
+<li>IoT device connectivity</li>
+<li>Remote network management</li>
+<li>Secure encrypted access</li>
+<li>Emergency responder connectivity</li>
+<li>Monetization support</li>
+</ul>
+</div>
+
+<!-- 13 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>13</span>
+<h2>Intercom</h2>
+<ul>
+<li>Two-way control center communication</li>
+<li>Citizen to police connection</li>
+<li>Emergency usage</li>
+<li>Audio & video calling</li>
+<li>VoIP & GSM support</li>
+<li>Rugged outdoor design</li>
+<li>AI noise reduction</li>
+<li>Auto SOS connection</li>
+<li>Remote diagnostics</li>
+<li>Enhanced public interaction</li>
+</ul>
+</div>
+
+<!-- 14 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>14</span>
+<h2>Touch Screen</h2>
+<ul>
+<li>Interactive smart pole interface</li>
+<li>Maps, weather & emergency info</li>
+<li>Ticketing & kiosk support</li>
+<li>Tourist & commuter friendly</li>
+<li>City service API integration</li>
+<li>Real-time updates</li>
+<li>Multilingual interface</li>
+<li>Sunlight readable display</li>
+<li>Touchless hygiene mode</li>
+<li>Custom city branding</li>
+</ul>
+</div>
+
+<!-- 15 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>15</span>
+<h2>AI Voice Communication</h2>
+<ul>
+<li>Voice interaction with pole</li>
+<li>Real-time AI responses</li>
+<li>Speech to command conversion</li>
+<li>Multilingual recognition</li>
+<li>ICCC integration</li>
+<li>Public information support</li>
+<li>Distress voice detection</li>
+<li>CCTV context awareness</li>
+<li>Remote announcements</li>
+<li>Accessibility enhancement</li>
+</ul>
+</div>
+
+<!-- 16 -->
+<div class="allfeatureappli-feature" data-image="images/smartpole/sp3.png">
+<span>16</span>
+<h2>AI Camera</h2>
+<ul>
+<li>HD video surveillance</li>
+<li>Face & object detection</li>
+<li>ANPR & RLVD integration</li>
+<li>Real-time ICCC alerts</li>
+<li>Night & thermal vision</li>
+<li>False alert filtering</li>
+<li>Cloud & edge storage</li>
+<li>Suspicious activity tracking</li>
+<li>24×7 surveillance</li>
+<li>Multi-lane scalability</li>
+</ul>
+</div>
+
+<!-- NAV -->
+<div class="allfeatureappli-nav">
+<button id="allfeatureappliPrev">↑</button>
+<div class="allfeatureappli-count"><span id="allfeatureappliCount">01</span> / 16</div>
+<button id="allfeatureappliNext">↓</button>
+</div>
+
+</div>
+
+      </div>
+
+      <script>
+        const afFeatures = document.querySelectorAll(".allfeatureappli-feature");
+        const afCount = document.getElementById("allfeatureappliCount");
+        const afNext = document.getElementById("allfeatureappliNext");
+        const afPrev = document.getElementById("allfeatureappliPrev");
+
+        const afImage1 = document.getElementById("allfeatureappliImage1");
+        const afImage2 = document.getElementById("allfeatureappliImage2");
+
+        let afIndex = 0;
+
+        function afScroll(i) {
+          afFeatures[i].scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        afNext.onclick = () => { afIndex = Math.min(afIndex + 1, afFeatures.length - 1); afScroll(afIndex); }
+        afPrev.onclick = () => { afIndex = Math.max(afIndex - 1, 0); afScroll(afIndex); }
+
+        function changeImageSmooth(newSrc) {
+          // Preload
+          const img = new Image();
+          img.src = newSrc;
+          img.onload = () => {
+            afImage2.src = newSrc;
+            afImage2.style.opacity = 1;  // fade in top image
+            afImage1.style.opacity = 0;  // fade out bottom image
+
+            setTimeout(() => {
+              // swap roles
+              afImage1.src = afImage2.src;
+              afImage1.style.opacity = 1;
+              afImage2.style.opacity = 0;
+            }, 800);
+          }
+        }
+
+        const afObserver = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              afFeatures.forEach(f => f.classList.remove("active"));
+              e.target.classList.add("active");
+              afIndex = [...afFeatures].indexOf(e.target);
+              afCount.textContent = String(afIndex + 1).padStart(2, "0");
+
+              changeImageSmooth(e.target.dataset.image);
+            }
+          })
+        }, { threshold: 0.6 });
+
+        afFeatures.forEach(f => afObserver.observe(f));
+      </script>
+
+    </div>
+
+    <!-- features applications end -->
 
 
-      <section class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col" data-aos="fade-in" data-aos-delay="0">
-              <img src="images/clients-05.svg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col" data-aos="fade-in" data-aos-delay="100">
-              <img src="images/clients-02.svg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col" data-aos="fade-in" data-aos-delay="200">
-              <img src="images/clients-03.svg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col" data-aos="fade-in" data-aos-delay="300">
-              <img src="images/clients-01.svg" alt="Image" class="img-fluid">
-            </div>
-            <div class="col" data-aos="fade-in" data-aos-delay="400">
-              <img src="images/clients-04.svg" alt="Image" class="img-fluid">
+
+    <!-- modules start -->
+<div class="allmodules pt-5 pb-5">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Poppins, sans-serif;
+    }
+
+    .allmodules {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .all-frame {
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      background: #d8d5d5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 70px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-shrink: 0;
+    }
+
+    .sidebar .vertical {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: 600;
+    }
+
+    .sidebar .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    /* HERO */
+    .hero {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: background-image 0.8s ease;
+    }
+
+    /* === PROFESSIONAL HERO ARROWS === */
+    .hero-arrows {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .hero-arrows div {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      pointer-events: all;
+      transition: all 0.3s ease;
+    }
+
+    .hero-arrows div:hover {
+      background: rgba(255, 255, 255, 0.6);
+      transform: scale(1.1);
+    }
+
+    /* RIGHT PANEL */
+    .right {
+      width: 320px;
+      background: #a3a1a1;
+      color: #fff;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .details h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .details p {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* THUMBNAILS */
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-top: 12px;
+      scrollbar-width: none;
+    }
+
+    .thumbnails::-webkit-scrollbar {
+      display: none;
+    }
+
+    .thumbnails img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.6;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .thumbnails img.active {
+      opacity: 1;
+      border-color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .all-frame {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 52px;
+        flex-direction: row;
+        padding: 0 16px;
+      }
+
+      .sidebar .vertical {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+
+      .sidebar .socials {
+        flex-direction: row;
+      }
+
+      .hero {
+        min-height: 65vh;
+      }
+
+      .hero-arrows div {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="all-frame">
+
+    <div class="sidebar">
+      <div class="vertical">NEUROPOLE</div>
+      <div class="socials">
+        <span>P</span><span>O</span><span>L</span><span>E</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <!-- HERO ARROWS -->
+      <div class="hero-arrows">
+        <div class="prev">&#8592;</div>
+        <div class="next">&#8594;</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="details">
+        <h3 class="title"></h3>
+        <p class="description"></p>
+      </div>
+      <div class="thumbnails"></div>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      const root = document.currentScript.parentNode;
+
+      const slides = [
+        { image: "images/qwer/1.png", title: "Adaptive Smart Lighting", description: "AI-driven lighting adapting to environmental conditions." },
+        { image: "images/qwer/2.png", title: "Emergency SOS", description: "Rapid-response SOS system for urban safety." },
+        { image: "images/qwer/3.png", title: "Environmental Sensors", description: "Smart sensors monitoring city conditions." },
+        { image: "images/qwer/4.png", title: "Traffic Management", description: "Optimized traffic flow and congestion control." },
+        { image: "images/qwer/5.png", title: "Air Quality Monitoring", description: "Real-time air pollution analysis." },
+        { image: "images/qwer/6.png", title: "Surveillance Systems", description: "AI-powered surveillance and security." },
+        { image: "images/qwer/7.png", title: "Public Wi-Fi", description: "Integrated public connectivity solution." }
+      ];
+
+      let index = 0;
+      const hero = root.querySelector(".hero");
+      const thumbs = root.querySelector(".thumbnails");
+      const title = root.querySelector(".title");
+      const desc = root.querySelector(".description");
+
+      slides.forEach((s, i) => {
+        const img = document.createElement("img");
+        img.src = s.image;
+        img.onclick = () => { index = i; update(); };
+        thumbs.appendChild(img);
+      });
+
+      const thumbImgs = thumbs.querySelectorAll("img");
+
+      function update() {
+        hero.style.backgroundImage = `url(${slides[index].image})`;
+        title.textContent = slides[index].title;
+        desc.textContent = slides[index].description;
+        thumbImgs.forEach((t, i) => t.classList.toggle("active", i === index));
+      }
+
+      root.querySelector(".prev").onclick = () => {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+      };
+
+      root.querySelector(".next").onclick = () => {
+        index = (index + 1) % slides.length;
+        update();
+      };
+
+      update();
+    })();
+  </script>
+</div>
+
+    <!-- modules end -->
+
+
+
+
+    <section class="site-section" id="work-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="site-section-heading text-center">Our Works</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, itaque neque, delectus
+              odio iure explicabo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_1.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Laptop on the Table</h2>
+                <span class="category">Web Application</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_2.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Wrist Watches</h2>
+                <span class="category">Branding</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_3.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Nike Shoe</h2>
+                <span class="category">Website</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_4.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Tall Chair</h2>
+                <span class="category">Web Application</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_5.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Drone</h2>
+                <span class="category">Branding</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_6.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_6.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Architect</h2>
+                <span class="category">Website</span>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_7.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_7.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Flower</h2>
+                <span class="category">Web Application</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_8.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_8.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Headset</h2>
+                <span class="category">Branding</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_9.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_9.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Amazon Speaker</h2>
+                <span class="category">Website</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_10.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_10.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Battle Creek</h2>
+                <span class="category">Web Application</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_11.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_11.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Nouri</h2>
+                <span class="category">Branding</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="images/img_12.jpg" class="media-1" data-fancybox="gallery">
+              <img src="images/img_12.jpg" alt="Image" class="img-fluid">
+              <div class="media-1-content">
+                <h2>Fiber Cloth</h2>
+                <span class="category">Website</span>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section ft-feature-1">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-12 w-100 ft-feature-1-content">
+            <div class="row align-items-center">
+              <div class="col-lg-5" data-jarallax-element="50">
+
+                <img src="images/img_13.jpg" alt="Image" class="img-fluid mb-4 mb-lg-0">
+
+              </div>
+              <div class="col-lg-3 ml-auto" data-jarallax-element="-50">
+                <div class="mb-5">
+                  <h3 class="d-flex align-items-center"><span
+                      class="icon icon-beach_access mr-2"></span><span>Strategy</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
+                  <p><a href="#">Read More</a></p>
+                </div>
+
+                <div>
+                  <h3 class="d-flex align-items-center"><span class="icon icon-build mr-2"></span><span>Web
+                      Development</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
+                  <p><a href="#">Read More</a></p>
+                </div>
+
+              </div>
+              <div class="col-lg-3">
+                <div class="mb-5">
+                  <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Art
+                      Direction</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
+                  <p><a href="#">Read More</a></p>
+                </div>
+
+                <div>
+                  <h3 class="d-flex align-items-center"><span
+                      class="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
+                  <p><a href="#">Read More</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
+    <section class="site-section testimonial-wrap">
+      <div class="container mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="site-section-heading text-center">Testimonials</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slide-one-item home-slider owl-carousel">
+        <div>
+          <div class="testimonial">
 
-      <section class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-lg-0 mb-4">
-              <div class="box-with-humber bg-white p-5">
-                <span class="icon icon-format_paint mr-2 text-primary h3 mb-3 d-block"></span>
-                <h2 class="text-primary">Brand Strategy</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam iste rerum perferendis.</p>
-                <ul class="list-unstyled ul-check primary">
-                  <li>Customer Experience</li>
-                  <li>Product Management</li>
-                  <li>Proof of Concept</li>
-                </ul>
-              </div>
-            </div>
+            <blockquote class="mb-5">
+              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
+                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
+                dolores excepturi earum unde iusto.&rdquo;</p>
+            </blockquote>
 
-            <div class="col-md-6 col-lg-4 mb-lg-0 mb-4" data-jarallax-element="-50">
-              <div class="box-with-humber bg-white p-5">
-                <span class="icon icon-palette mr-2 text-primary h3 mb-3 d-block"></span>
+            <figure class="mb-4 d-block align-items-center justify-content-center">
+              <div><img src="images/person_3.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+              <p>John Smith</p>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <div class="testimonial">
 
-                <h2 class="text-primary">Visual Identity</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam iste rerum perferendis.</p>
-                <ul class="list-unstyled ul-check primary">
-                  <li>Web Design</li>
-                  <li>Branding</li>
-                  <li>Web &amp; App Development</li>
-                </ul>
-              </div>
-            </div>
+            <blockquote class="mb-5">
+              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
+                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
+                dolores excepturi earum unde iusto.&rdquo;</p>
+            </blockquote>
+            <figure class="mb-4 d-block align-items-center justify-content-center">
+              <div><img src="images/person_2.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+              <p>Christine Aguilar</p>
+            </figure>
 
-            <div class="col-md-6 col-lg-4 mb-lg-0 mb-4" data-jarallax-element="20">
-              <div class="box-with-humber bg-white p-5">
-                <span class="icon icon-laptop2 mr-2 text-primary h3 mb-3 d-block"></span>
+          </div>
+        </div>
 
-                <h2 class="text-primary">Web Design</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam iste rerum perferendis.</p>
-                <ul class="list-unstyled ul-check primary">
-                  <li>Social Media</li>
-                  <li>Paid Campaigns</li>
-                  <li>Marketing &amp; SEO</li>
-                </ul>
+        <div>
+          <div class="testimonial">
+
+            <blockquote class="mb-5">
+              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
+                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
+                dolores excepturi earum unde iusto.&rdquo;</p>
+            </blockquote>
+            <figure class="mb-4 d-block align-items-center justify-content-center">
+              <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+              <p>Robert Spears</p>
+            </figure>
+
+
+          </div>
+        </div>
+
+        <div>
+          <div class="testimonial">
+
+            <blockquote class="mb-5">
+              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
+                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
+                dolores excepturi earum unde iusto.&rdquo;</p>
+            </blockquote>
+            <figure class="mb-4 d-block align-items-center justify-content-center">
+              <div><img src="images/person_5.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+              <p>Bruce Rogers</p>
+            </figure>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="site-section border-bottom" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center" data-aos="fade-up">
+            <h2 class="site-section-heading text-center">Our Services</h2>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-laptop2"></span></div>
+              <div>
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+              <div>
+                <h3>eCommerce</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-question_answer"></span></div>
+              <div>
+                <h3>Web Applications</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
 
-      <section class="site-section">
-        <div class="container">
-          <div class="row align-items-center justify-content-around">
-            <div class="col-lg-5" data-jarallax-element="-50">
-              <h2 class="text-primary">Web Design</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam iste rerum perferendis.</p>
-              <ul class="list-unstyled ul-check primary">
-                <li>Social Media</li>
-                <li>Paid Campaigns</li>
-                <li>Marketing &amp; SEO</li>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-format_paint"></span></div>
+              <div>
+                <h3>Branding</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-extension"></span></div>
+              <div>
+                <h3>Copy Writing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-phonelink"></span></div>
+              <div>
+                <h3>Mobile Applications</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
+                  at.</p>
+                <p><a href="#">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="site-section" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-md-5 ml-auto mb-5 order-md-2" data-jarallax-element="50">
+            <img src="images/img_13.jpg" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 order-md-1" data-jarallax-element="-50">
+
+            <div class="row">
+
+              <div class="col-12">
+                <div class="text-left pb-1">
+                  <h2 class="site-section-heading">About Us</h2>
+                </div>
+              </div>
+              <div class="col-12 mb-4">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet incidunt magnam
+                  corrupti, odit eos harum quaerat nostrum voluptatibus aspernatur eligendi accusantium cum, impedit
+                  blanditiis voluptate commodi doloribus, nemo dignissimos recusandae.</p>
+              </div>
+              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                <div class="unit-4">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-phonelink"></span></div>
+                  <div>
+                    <h3>Web &amp; Mobile Specialties</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
+                    <p class="mb-0"><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                <div class="unit-4">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-extension"></span></div>
+                  <div>
+                    <h3>Intuitive Thinkers</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
+                    <p class="mb-0"><a href="#">Learn More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section border-bottom" id="team-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <h2 class="site-section-heading">Our Team</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="person text-center bg-white p-4">
+              <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+              <h3>John Rooster</h3>
+              <p class="position text-muted">Co-Founder, President</p>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
+                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
+                tempore suscipit inventore deserunt tenetur.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="person text-center bg-white p-4">
+              <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+              <h3>Tom Sharp</h3>
+              <p class="position text-muted">Co-Founder, COO</p>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
+                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
+                tempore suscipit inventore deserunt tenetur.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="person text-center bg-white p-4">
+              <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
+              <h3>Winston Hodson</h3>
+              <p class="position text-muted">Marketing</p>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
+                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
+                tempore suscipit inventore deserunt tenetur.</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="col-lg-6" data-jarallax-element="50">
+    <section class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center">
+            <h2 class="site-section-heading text-center">Blog</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
+              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span
+                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
+                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
               <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span
+                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
+                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="site-section" id="work-section">
-        <div class="container">
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-8 text-center">
-              <h2 class="site-section-heading text-center">Our Works</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, itaque neque, delectus odio iure explicabo.</p>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_1.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Laptop on the Table</h2>
-                  <span class="category">Web Application</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_2.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Wrist Watches</h2>
-                  <span class="category">Branding</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_3.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Nike Shoe</h2>
-                  <span class="category">Website</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_4.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_4.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Tall Chair</h2>
-                  <span class="category">Web Application</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_5.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_5.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Drone</h2>
-                  <span class="category">Branding</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_6.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_6.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Architect</h2>
-                  <span class="category">Website</span>
-                </div>
-              </a>
-            </div>
-
-
-
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_7.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_7.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Flower</h2>
-                  <span class="category">Web Application</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_8.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_8.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Headset</h2>
-                  <span class="category">Branding</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_9.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_9.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Amazon Speaker</h2>
-                  <span class="category">Website</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_10.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_10.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Battle Creek</h2>
-                  <span class="category">Web Application</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_11.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_11.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Nouri</h2>
-                  <span class="category">Branding</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <a href="images/img_12.jpg" class="media-1" data-fancybox="gallery">
-                <img src="images/img_12.jpg" alt="Image" class="img-fluid">
-                <div class="media-1-content">
-                  <h2>Fiber Cloth</h2>
-                  <span class="category">Website</span>
-                </div>
-              </a>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
-      <section class="section ft-feature-1">
-        <div class="container">
-          <div class="row align-items-stretch">
-            <div class="col-12 w-100 ft-feature-1-content">
-              <div class="row align-items-center">
-                <div class="col-lg-5"  data-jarallax-element="50">
-
-                  <img src="images/img_13.jpg" alt="Image" class="img-fluid mb-4 mb-lg-0">
-
-                </div>
-                <div class="col-lg-3 ml-auto" data-jarallax-element="-50">
-                  <div class="mb-5">
-                    <h3 class="d-flex align-items-center"><span class="icon icon-beach_access mr-2"></span><span>Strategy</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                    <p><a href="#">Read More</a></p>
-                  </div>
-
-                  <div>
-                    <h3 class="d-flex align-items-center"><span class="icon icon-build mr-2"></span><span>Web Development</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                    <p><a href="#">Read More</a></p>
-                  </div>
-
-                </div>
-                <div class="col-lg-3">
-                  <div class="mb-5">
-                    <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Art Direction</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                    <p><a href="#">Read More</a></p>
-                  </div>
-
-                  <div>
-                    <h3 class="d-flex align-items-center"><span class="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                    <p><a href="#">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="site-section testimonial-wrap">
-        <div class="container mb-5">
-          <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-              <h2 class="site-section-heading text-center">Testimonials</h2>
-            </div>
-          </div>
-        </div>
-        <div class="slide-one-item home-slider owl-carousel">
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="images/person_3.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>John Smith</p>
-              </figure>
-            </div>
-          </div>
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="images/person_2.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>Christine Aguilar</p>
-              </figure>
-
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="h-entry">
+              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span
+                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
+                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
+              <p><a href="#">Continue Reading...</a></p>
             </div>
           </div>
 
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>Robert Spears</p>
-              </figure>
-
-
-            </div>
-          </div>
-
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="images/person_5.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>Bruce Rogers</p>
-              </figure>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="site-section border-bottom" id="services-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-8 text-center" data-aos="fade-up">
-              <h2 class="site-section-heading text-center">Our Services</h2>
-            </div>
-          </div>
-          <div class="row align-items-stretch">
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-laptop2"></span></div>
-                <div>
-                  <h3>Web Design</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                  <h3>eCommerce</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-question_answer"></span></div>
-                <div>
-                  <h3>Web Applications</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-format_paint"></span></div>
-                <div>
-                  <h3>Branding</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-extension"></span></div>
-                <div>
-                  <h3>Copy Writing</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-              <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-phonelink"></span></div>
-                <div>
-                  <h3>Mobile Applications</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                  <p><a href="#">Learn More</a></p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <div class="site-section" id="about-section">
-        <div class="container">
-          <div class="row mb-5">
-
-            <div class="col-md-5 ml-auto mb-5 order-md-2"  data-jarallax-element="50">
-              <img src="images/img_13.jpg" alt="Image" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6 order-md-1"  data-jarallax-element="-50">
-
-              <div class="row">
-
-                <div class="col-12">
-                  <div class="text-left pb-1">
-                    <h2 class="site-section-heading">About Us</h2>
-                  </div>
-                </div>
-                <div class="col-12 mb-4">
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet incidunt magnam corrupti, odit eos harum quaerat nostrum voluptatibus aspernatur eligendi accusantium cum, impedit blanditiis voluptate commodi doloribus, nemo dignissimos recusandae.</p>
-                </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                  <div class="unit-4">
-                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-phonelink"></span></div>
-                    <div>
-                      <h3>Web &amp; Mobile Specialties</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                      <p class="mb-0"><a href="#">Learn More</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                  <div class="unit-4">
-                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-extension"></span></div>
-                    <div>
-                      <h3>Intuitive Thinkers</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                      <p class="mb-0"><a href="#">Learn More</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
       </div>
+    </section>
 
 
-      <div class="site-section border-bottom" id="team-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-7 text-center">
-              <h2 class="site-section-heading">Our Team</h2>
-            </div>
+
+
+    <section class="site-section" id="contact-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="site-section-heading">Contact Us</h2>
           </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-              <div class="person text-center bg-white p-4">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-                <h3>John Rooster</h3>
-                <p class="position text-muted">Co-Founder, President</p>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-5">
+
+
+
+            <form action="#" class="p-5 bg-white">
+
+              <h2 class="h4 mb-5">Contact Form</h2>
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-              <div class="person text-center bg-white p-4">
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-                <h3>Tom Sharp</h3>
-                <p class="position text-muted">Co-Founder, COO</p>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-              <div class="person text-center bg-white p-4">
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-                <h3>Winston Hodson</h3>
-                <p class="position text-muted">Marketing</p>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                </ul>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input type="subject" id="subject" class="form-control">
+                </div>
               </div>
-            </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"
+                    placeholder="Write your notes or questions here..."></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                </div>
+              </div>
+
+
+            </form>
           </div>
+
         </div>
       </div>
+    </section>
 
-      <section class="site-section" id="blog-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-8 text-center">
-              <h2 class="site-section-heading text-center">Blog</h2>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-                <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                <p><a href="#">Continue Reading...</a></p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-                <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-                <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                <p><a href="#">Continue Reading...</a></p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-              <div class="h-entry">
-                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-                <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-                <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                <p><a href="#">Continue Reading...</a></p>
-              </div> 
-            </div>
 
-          </div>
+    <section class="neuropole-wrapper">
+
+      <!-- LEFT IMAGE -->
+      <div class="neuropole-image">
+        <img id="featureImage" src="images/smartpole/sp1.png" alt="Feature Image">
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="neuropole-content">
+
+        <div class="feature active" data-image="images/smartpole/sp1.png">
+          <span>01</span>
+          <h2>Smart Adaptive Lighting</h2>
+          <p>Automatically adjusts brightness based on traffic and environment.</p>
         </div>
-      </section>
 
-
-
-
-      <section class="site-section" id="contact-section">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="site-section-heading">Contact Us</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-5">
-
-
-
-              <form action="#" class="p-5 bg-white">
-
-                <h2 class="h4 mb-5">Contact Form</h2> 
-
-                <div class="row form-group">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <label class="text-black" for="fname">First Name</label>
-                    <input type="text" id="fname" class="form-control">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="text-black" for="lname">Last Name</label>
-                    <input type="text" id="lname" class="form-control">
-                  </div>
-                </div>
-
-                <div class="row form-group">
-
-                  <div class="col-md-12">
-                    <label class="text-black" for="email">Email</label> 
-                    <input type="email" id="email" class="form-control">
-                  </div>
-                </div>
-
-                <div class="row form-group">
-
-                  <div class="col-md-12">
-                    <label class="text-black" for="subject">Subject</label> 
-                    <input type="subject" id="subject" class="form-control">
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="text-black" for="message">Message</label> 
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
-                  </div>
-                </div>
-
-
-              </form>
-            </div>
-
-          </div>
+        <div class="feature" data-image="images/smartpole/sp1.png">
+          <span>02</span>
+          <h2>Public WiFi</h2>
+          <p>High-speed connectivity enabling smart city services.</p>
         </div>
-      </section>
 
+        <div class="feature" data-image="images/smartpole/sp1.png">
+          <span>03</span>
+          <h2>EV Charging</h2>
+          <p>Integrated EV charging solution for urban mobility.</p>
+        </div>
 
+        <div class="feature" data-image="images/smartpole/sp1.png">
+          <span>04</span>
+          <h2>AI CCTV Surveillance</h2>
+          <p>Real-time AI monitoring for enhanced safety.</p>
+        </div>
 
-      <section class="neuropole-wrapper">
+        <!-- Add till 16 features same way -->
 
-  <!-- LEFT IMAGE -->
-  <div class="neuropole-image">
-    <img id="featureImage" src="images/smartpole/sp1.png" alt="Feature Image">
-  </div>
+      </div>
+    </section>
 
-  <!-- RIGHT CONTENT -->
-  <div class="neuropole-content">
-
-    <div class="feature active" data-image="images/smartpole/sp1.png">
-      <span>01</span>
-      <h2>Smart Adaptive Lighting</h2>
-      <p>Automatically adjusts brightness based on traffic and environment.</p>
-    </div>
-
-    <div class="feature" data-image="images/smartpole/sp1.png">
-      <span>02</span>
-      <h2>Public WiFi</h2>
-      <p>High-speed connectivity enabling smart city services.</p>
-    </div>
-
-    <div class="feature" data-image="images/smartpole/sp1.png">
-      <span>03</span>
-      <h2>EV Charging</h2>
-      <p>Integrated EV charging solution for urban mobility.</p>
-    </div>
-
-    <div class="feature" data-image="images/smartpole/sp1.png">
-      <span>04</span>
-      <h2>AI CCTV Surveillance</h2>
-      <p>Real-time AI monitoring for enhanced safety.</p>
-    </div>
-
-    <!-- Add till 16 features same way -->
-
-  </div>
-</section>
-
-<style>
-  /* body {
+    <style>
+      /* body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #0b0f14;
   color: #fff;
 } */
 
-.neuropole-wrapper {
-  display: flex;
-  max-width: 1400px;
-  margin: auto;
-}
-
-/* LEFT IMAGE */
-.neuropole-image {
-  position: sticky;
-  top: 0;
-  width: 45%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.neuropole-image img {
-  height: 520px;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* RIGHT CONTENT */
-.neuropole-content {
-  width: 55%;
-  padding: 100px 60px;
-}
-
-/* EACH FEATURE */
-.feature {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0.3;
-  transition: opacity 0.4s ease;
-}
-
-.feature.active {
-  opacity: 1;
-}
-
-.feature span {
-  color: #4fc3f7;
-  letter-spacing: 2px;
-  font-size: 14px;
-}
-
-.feature h2 {
-  font-size: 40px;
-  margin: 12px 0;
-}
-
-.feature p {
-  font-size: 18px;
-  max-width: 420px;
-  opacity: 0.85;
-}
-
-/* MOBILE */
-@media(max-width: 768px) {
-  .neuropole-wrapper {
-    flex-direction: column;
-  }
-
-  .neuropole-image {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-  }
-
-  .neuropole-content {
-    width: 100%;
-    padding: 40px 20px;
-  }
-
-  .feature {
-    min-height: auto;
-    margin-bottom: 80px;
-  }
-}
-
-</style>
-
-
-
-<footer class="site-footer bg-dark text-white pt-5">
-  <div class="container">
-    <div class="row align-items-start">
-      <!-- Logo and About -->
-      <div class="col-md-4 mb-4">
-        <h1 class="mb-3 site-logo">
-          <a href="index.html" class="mb-0">
-            <img src="images/footerlogo.png" alt="NeuroPole Logo" class="site-logo-img" style="max-width: 180px;">
-          </a>
-        </h1>
-        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.95rem; line-height:1.6;">
-          NeuroPole is advancing neuroscience with AI-powered innovation, bridging technology and brain research for a smarter future.
-        </p>
-      </div>
- 
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-4">
-        <h2 class="footer-heading mb-3" style="font-family: 'Helvetica Neue', Arial, sans-serif;">Quick Links</h2>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="about.html" class="footer-link">Who We Are?</a></li>
-          <li><a href="features.html" class="footer-link">Our Features</a></li>
-          <li><a href="contact.html" class="footer-link">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Social Links -->
-      <div class="col-md-4 mb-4">
-        <h2 class="footer-heading mb-3" style="font-family: 'Helvetica Neue', Arial, sans-serif;">Follow Us</h2>
-        <div class="social-icons">
-          <a href="#" class="social-link"><span class="icon-facebook"></span></a>
-          <a href="#" class="social-link"><span class="icon-twitter"></span></a>
-          <a href="#" class="social-link"><span class="icon-instagram"></span></a>
-          <a href="#" class="social-link"><span class="icon-linkedin"></span></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="row pt-4 mt-4 text-center border-top border-secondary">
-      <div class="col-md-12">
-        <p class="mb-0 text-white" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem;">
-          &copy;<script>document.write(new Date().getFullYear());</script> NeuroPole. All Rights Reserved.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Styles -->
-  <style>
-    .footer-link {
-      color: #ffffff;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-    }
-    .footer-link:hover {
-      color: #ffffff;
-      transform: translateX(3px);
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 5px;
-    }
-    .social-link {
-      display: inline-block;
-      color: #ffffff;
-      font-size: 1.1rem; /* small, professional size */
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-    .social-link:hover {
-      transform: scale(1.2) translateY(-2px); /* slight hover movement */
-      color: #ffffff;
-    }
-
-    .site-footer p, .footer-heading {
-      color: #ffffff;
-    }
-  </style>
-</footer>
-
-
-
-
-    </div> <!-- .site-wrap -->
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jarallax.min.js"></script>
-    <script src="js/jarallax-element.min.js"></script>
-    <script src="js/lozad.min.js"></script>
-    <script src="js/modernizr.min.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/OBJLoader.js"></script>
-    <script src="js/ParticleHead.js"></script>
-
-    <script src="js/jquery.sticky.js"></script>
-
-    <script src="js/typed.js"></script>
-    <script>
-      var typed = new Typed('.typed-words', {
-        strings: ["Neuroscience", "Neuro Intelligence", "AI-Driven Research", "Brain Technology"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 4000,
-        startDelay: 1000,
-        loop: true,
-        showCursor: true
-      });
-    </script>
-
-    <script src="js/main.js"></script>
-
-    <script>
-const features = document.querySelectorAll('.feature');
-const image = document.getElementById('featureImage');
-
-window.addEventListener('scroll', () => {
-  features.forEach(feature => {
-    const rect = feature.getBoundingClientRect();
-    const center = window.innerHeight / 2;
-
-    if (rect.top < center && rect.bottom > center) {
-      feature.classList.add('active');
-
-      const newImg = feature.dataset.image;
-      if (!image.src.includes(newImg)) {
-        image.style.opacity = 0;
-        setTimeout(() => {
-          image.src = newImg;
-          image.style.opacity = 1;
-        }, 200);
+      .neuropole-wrapper {
+        display: flex;
+        max-width: 1400px;
+        margin: auto;
       }
 
-    } else {
-      feature.classList.remove('active');
-    }
-  });
-});
-</script>
+      /* LEFT IMAGE */
+      .neuropole-image {
+        position: sticky;
+        top: 0;
+        width: 45%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-  </body>
-  </html>
+      .neuropole-image img {
+        height: 520px;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      /* RIGHT CONTENT */
+      .neuropole-content {
+        width: 55%;
+        padding: 100px 60px;
+      }
+
+      /* EACH FEATURE */
+      .feature {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0.3;
+        transition: opacity 0.4s ease;
+      }
+
+      .feature.active {
+        opacity: 1;
+      }
+
+      .feature span {
+        color: #4fc3f7;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
+
+      .feature h2 {
+        font-size: 40px;
+        margin: 12px 0;
+      }
+
+      .feature p {
+        font-size: 18px;
+        max-width: 420px;
+        opacity: 0.85;
+      }
+
+      /* MOBILE */
+      @media(max-width: 768px) {
+        .neuropole-wrapper {
+          flex-direction: column;
+        }
+
+        .neuropole-image {
+          position: relative;
+          width: 100%;
+          height: 60vh;
+        }
+
+        .neuropole-content {
+          width: 100%;
+          padding: 40px 20px;
+        }
+
+        .feature {
+          min-height: auto;
+          margin-bottom: 80px;
+        }
+      }
+    </style>
+
+
+
+    <footer class="site-footer bg-dark text-white pt-5">
+      <div class="container">
+        <div class="row align-items-start">
+          <!-- Logo and About -->
+          <div class="col-md-4 mb-4">
+            <h1 class="mb-3 site-logo">
+              <a href="index.html" class="mb-0">
+                <img src="images/footerlogo.png" alt="NeuroPole Logo" class="site-logo-img" style="max-width: 180px;">
+              </a>
+            </h1>
+            <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.95rem; line-height:1.6;">
+              NeuroPole is advancing neuroscience with AI-powered innovation, bridging technology and brain research for
+              a smarter future.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4">
+            <h2 class="footer-heading mb-3" style="font-family: 'Helvetica Neue', Arial, sans-serif;">Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="about.html" class="footer-link">Who We Are?</a></li>
+              <li><a href="features.html" class="footer-link">Our Features</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="col-md-4 mb-4">
+            <h2 class="footer-heading mb-3" style="font-family: 'Helvetica Neue', Arial, sans-serif;">Follow Us</h2>
+            <div class="social-icons">
+              <a href="#" class="social-link"><span class="icon-facebook"></span></a>
+              <a href="#" class="social-link"><span class="icon-twitter"></span></a>
+              <a href="#" class="social-link"><span class="icon-instagram"></span></a>
+              <a href="#" class="social-link"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row pt-4 mt-4 text-center border-top border-secondary">
+          <div class="col-md-12">
+            <p class="mb-0 text-white" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem;">
+              &copy;
+              <script>document.write(new Date().getFullYear());</script> NeuroPole. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Styles -->
+      <style>
+        .footer-link {
+          color: #ffffff;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          font-size: 0.95rem;
+        }
+
+        .footer-link:hover {
+          color: #ffffff;
+          transform: translateX(3px);
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 15px;
+          margin-top: 5px;
+        }
+
+        .social-link {
+          display: inline-block;
+          color: #ffffff;
+          font-size: 1.1rem;
+          /* small, professional size */
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-link:hover {
+          transform: scale(1.2) translateY(-2px);
+          /* slight hover movement */
+          color: #ffffff;
+        }
+
+        .site-footer p,
+        .footer-heading {
+          color: #ffffff;
+        }
+      </style>
+    </footer>
+
+
+
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jarallax.min.js"></script>
+  <script src="js/jarallax-element.min.js"></script>
+  <script src="js/lozad.min.js"></script>
+  <script src="js/modernizr.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/ParticleHead.js"></script>
+
+  <script src="js/jquery.sticky.js"></script>
+
+  <script src="js/typed.js"></script>
+  <script>
+    var typed = new Typed('.typed-words', {
+      strings: ["Neuroscience", "Neuro Intelligence", "AI-Driven Research", "Brain Technology"],
+      typeSpeed: 80,
+      backSpeed: 80,
+      backDelay: 4000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    const features = document.querySelectorAll('.feature');
+    const image = document.getElementById('featureImage');
+
+    window.addEventListener('scroll', () => {
+      features.forEach(feature => {
+        const rect = feature.getBoundingClientRect();
+        const center = window.innerHeight / 2;
+
+        if (rect.top < center && rect.bottom > center) {
+          feature.classList.add('active');
+
+          const newImg = feature.dataset.image;
+          if (!image.src.includes(newImg)) {
+            image.style.opacity = 0;
+            setTimeout(() => {
+              image.src = newImg;
+              image.style.opacity = 1;
+            }, 200);
+          }
+
+        } else {
+          feature.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
