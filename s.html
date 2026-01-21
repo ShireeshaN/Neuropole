@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Steps</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Diagonal Welcome Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="card">
+<section class="hero-section">
 
-  <!-- HEADER -->
-  <div class="header">
-    <h2>Our Steps</h2>
-    <p>Great Title is Here</p>
+    <!-- left text -->
+  <div class="left-area"></div>
+
+  <!-- LEFT CONTENT -->
+  <div class="content-area">
+    <span class="phase-title">PROJECT PHASE</span>
+    <h1>WELCOME</h1>
+    <p>
+      Replace with your own text. Nullam sodales pulvinar
+      dui ad non magna, sollicitudin et. No quo aperiri
+      oblique commune, erant dicunt.
+    </p>
+
+    <span class="phase-footer">PHASE</span>
   </div>
 
-  <!-- TOP CANVAS -->
-  <div class="canvas">
+  <!-- DIAGONAL LINE -->
+  <div class="diagonal-line"></div>
 
-    <!-- LINES -->
-    <div class="line l1"></div>
-    <div class="line l2"></div>
-    <div class="line l3"></div>
-    <div class="line l4"></div>
-
-    <!-- CIRCLES -->
-    <div class="circle c1">1</div>
-    <div class="circle c2">2</div>
-    <div class="circle c3">3</div>
-    <div class="circle c4">4</div>
-
-  </div>
-
-  <!-- TEXT -->
-  <div class="bottom">
-    <div>
-      <h4>Descriptions Here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div>
-      <h4>Descriptions Here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div>
-      <h4>Descriptions Here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div>
-      <h4>Descriptions Here</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </div>
+  <!-- RIGHT IMAGE -->
+  <div class="image-area"></div>
 
 </section>
 
@@ -60,112 +39,98 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background: #fff;
-  padding: 40px;
+  background: #f5f5f5;
 }
 
-/* CARD */
-.card {
-  width: 1200px;                 /* fixed canvas like screenshot */
-  background: #f5f5f3;
-  border-radius: 28px;
-  padding: 50px 60px 60px;
-  margin: auto;
-}
-
-/* HEADER */
-.header h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-}
-
-.header p {
-  font-size: 13px;
-  color: #9a9a9a;
-}
-
-/* CANVAS */
-.canvas {
+/* MAIN SECTION */
+.hero-section {
   position: relative;
-  height: 220px;
-  margin-top: 40px;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
 }
 
-/* LINES (PIXEL POSITIONS) */
-.line {
+/* LEFT CONTENT AREA */
+.content-area {
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  width: 65%;
+  height: 100%;
+  padding: 100px 80px;
+  z-index: 2;
+}
+
+/* TEXT STYLES */
+.phase-title {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #777;
+}
+
+.content-area h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.content-area p {
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.phase-footer {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #777;
+}
+
+/* DIAGONAL LINE */
+.diagonal-line {
+  position: absolute;
+  top: -30%;
+  left: 55%;
+  width: 2px;
+  height: 100%;
+  background: #000;
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+
+/* RIGHT IMAGE AREA */
+.image-area {
   position: absolute;
   top: 0;
-  width: 1px;
-  height: 110px;
-  background: #9c9c9c;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 100% , 100% 0 );
 }
 
-/* exact X positions */
-.l1 { left: 320px; transform: rotate(-22deg); transform-origin: top right; }
-.l2 { left: 600px; }
-.l3 { left: 680px; }
-.l4 { left: 760px; }
-
-/* CIRCLES */
-.circle {
+/* RIGHT IMAGE AREA */
+.left-area {
   position: absolute;
-  top: 95px;
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* exact circle positions */
-.c1 {
-  left: 250px;                  /* isolated */
-  background: #dddddd;
-}
-
-.c2 {
-  left: 565px;
-  background: #a6a6a6;
-}
-
-.c3 {
-  left: 645px;
-  background: #5c5c60;
-}
-
-.c4 {
-  left: 725px;
-  background: #1f1f24;
-}
-
-/* TEXT */
-.bottom {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.bottom h4 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-
-.bottom p {
-  margin-top: 10px;
-  font-size: 12.5px;
-  color: #7a7a7a;
-  line-height: 1.6;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 70%;
+  background-color: rgb(228, 226, 226);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon( 0 0, 100% 0 , 0 100%);
 }
 
 </style>
