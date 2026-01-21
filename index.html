@@ -61,14 +61,35 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">Who We Are ?</a></li>
-                <li>
-                  <a href="features.html" class="nav-link">Our Features</a>
+                <li><a href="about.html" class="nav-link ">Who We Are ?</a></li>
+                <!-- <li>
+                  <a href="features.html" class="nav-link active">Our Features</a>
+                </li> -->
+                <li class="has-children">
+                  <a href="#about-section" class="nav-link">Features</a>
+                   <ul class="dropdown">
+                    <li><a href="evcharger.html">EV Charger</a></li>
+                    <li><a href="emergencysosalert.html">Emergency SOS Alert</a></li>
+                     <li><a href="wiredcharging.html">Wired Charging</a></li>
+                    <li><a href="wirelesscharging.html">Wireless Charging</a></li>
+                     <li><a href="airqualitysensor.html">Air Quality Sensor</a></li>
+                    <li><a href="airqualityscreen.html">Air Quality Screen </a></li>
+                     <li><a href="streetlighting.html">Street Lighting</a></li>
+                    <li><a href="paloudspeaker.html">PA Loudspeaker</a></li>
+                     <li><a href="powergenerationsystem.html">Power Generation System</a></li>
+                    <li><a href="rgbpixelledscreen.html">RGB Pixel LED Screen </a></li>
+                     <li><a href="motiondetector.html">Motion Detector</a></li>
+                    <li><a href="wifihotspot.html">Wi-Fi Hotspot</a></li>
+                     <li><a href="intercom.html">Intercom</a></li>
+                    <li><a href="androidtouchscreen.html">Android Touch Screen</a></li>
+                     <li><a href="aibasedvoicecommunication.html">AI-Based Voice Communication</a></li>
+                    <li><a href="aibasedcamera.html">AI-Based Camera </a></li>
+                  </ul>
                 </li>
-               
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+             
+                <li><a href="contact.html" class="nav-link ">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -241,12 +262,14 @@
 ====================== */
 .whoweare {
   width: 100%;
-  padding: 70px 80px;
+  padding: 90px 80px 140px; /* TOP | SIDES | BOTTOM increased */
   position: relative;
   background: #f5f5f5;
   color: #111;
   font-family: Poppins, sans-serif;
   overflow: hidden;
+
+  min-height: 720px; /* 👈 Desktop height control */
 }
 
 /* ===== Header ===== */
@@ -425,7 +448,7 @@
       <style>
        .allfeatureappli-section {
   font-family: "Inter", sans-serif;
-  background: #f6f8fb;
+  background: #ffffff;
   color: #0b1a2a;
   width: 100%;
 }
@@ -975,8 +998,64 @@
       </script>
 
     </div>
-
     <!-- features applications end -->
+
+
+
+<!-- animione start -->
+<div class="animione">
+  <style>
+    .animione {
+      width: 100%;
+      height: 100vh;          /* Full screen */
+      background: transparent; /* No background */
+      font-family: Poppins, sans-serif;
+    }
+
+    .animione-wrap {
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animione-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .animione-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* FULL image visible */
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .animione-wrap {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <div class="animione-wrap">
+    <div class="animione-box">
+      <img src="images/smartpole/poles.png" alt="">
+    </div>
+
+    <div class="animione-box">
+      <img src="images/smartpole/poles.png" alt="">
+    </div>
+
+    <div class="animione-box">
+      <img src="images/smartpole/poles.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- animione end -->
 
 
 
@@ -990,11 +1069,12 @@
       font-family: Poppins, sans-serif;
     }
 
-    .allmodules {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-    }
+  .allmodules {
+  width: 100%;
+  max-width: 100%;   /* ❌ remove 1200px limit */
+  margin: 0;         /* ❌ remove auto margin */
+  padding: 0;        /* optional – full edge fit */
+}
 
     .all-frame {
       width: 100%;
@@ -1242,13 +1322,12 @@
     })();
   </script>
 </div>
-
     <!-- modules end -->
 
 
 
 
-    <section class="site-section" id="work-section">
+    <!-- <section class="site-section" id="work-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
@@ -1377,368 +1456,160 @@
 
         </div>
       </div>
-    </section>
-
-    <section class="section ft-feature-1">
-      <div class="container">
-        <div class="row align-items-stretch">
-          <div class="col-12 w-100 ft-feature-1-content">
-            <div class="row align-items-center">
-              <div class="col-lg-5" data-jarallax-element="50">
-
-                <img src="images/img_13.jpg" alt="Image" class="img-fluid mb-4 mb-lg-0">
-
-              </div>
-              <div class="col-lg-3 ml-auto" data-jarallax-element="-50">
-                <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span
-                      class="icon icon-beach_access mr-2"></span><span>Strategy</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-
-                <div>
-                  <h3 class="d-flex align-items-center"><span class="icon icon-build mr-2"></span><span>Web
-                      Development</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-
-              </div>
-              <div class="col-lg-3">
-                <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Art
-                      Direction</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-
-                <div>
-                  <h3 class="d-flex align-items-center"><span
-                      class="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </section> -->
 
 
-    <section class="site-section testimonial-wrap">
-      <div class="container mb-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="site-section-heading text-center">Testimonials</h2>
-          </div>
-        </div>
-      </div>
-      <div class="slide-one-item home-slider owl-carousel">
-        <div>
-          <div class="testimonial">
 
-            <blockquote class="mb-5">
-              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
-                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
-                dolores excepturi earum unde iusto.&rdquo;</p>
-            </blockquote>
-
-            <figure class="mb-4 d-block align-items-center justify-content-center">
-              <div><img src="images/person_3.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-              <p>John Smith</p>
-            </figure>
-          </div>
-        </div>
-        <div>
-          <div class="testimonial">
-
-            <blockquote class="mb-5">
-              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
-                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
-                dolores excepturi earum unde iusto.&rdquo;</p>
-            </blockquote>
-            <figure class="mb-4 d-block align-items-center justify-content-center">
-              <div><img src="images/person_2.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-              <p>Christine Aguilar</p>
-            </figure>
-
-          </div>
-        </div>
-
-        <div>
-          <div class="testimonial">
-
-            <blockquote class="mb-5">
-              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
-                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
-                dolores excepturi earum unde iusto.&rdquo;</p>
-            </blockquote>
-            <figure class="mb-4 d-block align-items-center justify-content-center">
-              <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-              <p>Robert Spears</p>
-            </figure>
+   
+   
 
 
-          </div>
-        </div>
+    
+<section class="faq-section">
+  <h2 class="faq-title">FAQ</h2>
 
-        <div>
-          <div class="testimonial">
-
-            <blockquote class="mb-5">
-              <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam
-                quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet
-                dolores excepturi earum unde iusto.&rdquo;</p>
-            </blockquote>
-            <figure class="mb-4 d-block align-items-center justify-content-center">
-              <div><img src="images/person_5.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-              <p>Bruce Rogers</p>
-            </figure>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="site-section border-bottom" id="services-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center" data-aos="fade-up">
-            <h2 class="site-section-heading text-center">Our Services</h2>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-laptop2"></span></div>
-              <div>
-                <h3>Web Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-              <div>
-                <h3>eCommerce</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-question_answer"></span></div>
-              <div>
-                <h3>Web Applications</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-format_paint"></span></div>
-              <div>
-                <h3>Branding</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-extension"></span></div>
-              <div>
-                <h3>Copy Writing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-phonelink"></span></div>
-              <div>
-                <h3>Mobile Applications</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="site-section" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-
-          <div class="col-md-5 ml-auto mb-5 order-md-2" data-jarallax-element="50">
-            <img src="images/img_13.jpg" alt="Image" class="img-fluid rounded">
-          </div>
-          <div class="col-md-6 order-md-1" data-jarallax-element="-50">
-
-            <div class="row">
-
-              <div class="col-12">
-                <div class="text-left pb-1">
-                  <h2 class="site-section-heading">About Us</h2>
-                </div>
-              </div>
-              <div class="col-12 mb-4">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet incidunt magnam
-                  corrupti, odit eos harum quaerat nostrum voluptatibus aspernatur eligendi accusantium cum, impedit
-                  blanditiis voluptate commodi doloribus, nemo dignissimos recusandae.</p>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-phonelink"></span></div>
-                  <div>
-                    <h3>Web &amp; Mobile Specialties</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-extension"></span></div>
-                  <div>
-                    <h3>Intuitive Thinkers</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I take just one consultation?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, you can book a single consultation without committing to a long-term program.</p>
     </div>
+  </div>
 
-
-    <div class="site-section border-bottom" id="team-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h2 class="site-section-heading">Our Team</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-            <div class="person text-center bg-white p-4">
-              <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-              <h3>John Rooster</h3>
-              <p class="position text-muted">Co-Founder, President</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
-                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
-                tempore suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-            <div class="person text-center bg-white p-4">
-              <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-              <h3>Tom Sharp</h3>
-              <p class="position text-muted">Co-Founder, COO</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
-                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
-                tempore suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-            <div class="person text-center bg-white p-4">
-              <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mb-3">
-              <h3>Winston Hodson</h3>
-              <p class="position text-muted">Marketing</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde
-                molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate
-                tempore suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="faq-item">
+    <button class="faq-question">
+      If I am a complete beginner, is mentorship right for me?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Absolutely. The mentorship is structured to support beginners from the basics.</p>
     </div>
+  </div>
 
-    <section class="site-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center">
-            <h2 class="site-section-heading text-center">Blog</h2>
-          </div>
-        </div>
+  <div class="faq-item">
+    <button class="faq-question">
+      How often can I message my mentor?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>You can message your mentor during agreed working hours with reasonable frequency.</p>
+    </div>
+  </div>
 
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span
-                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
-                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span
-                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
-                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              <h2 class="font-size-regular"><a href="#">Create Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span
-                  class="mx-2">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente
-                veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
+  <div class="faq-item">
+    <button class="faq-question">
+      Will the mentor help me find a job?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>The mentor will guide you with portfolio reviews, interviews, and job strategies.</p>
+    </div>
+  </div>
 
-        </div>
-      </div>
-    </section>
+  <div class="faq-item">
+    <button class="faq-question">
+      Do you have courses for designers?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, we offer specialized courses tailored for designers at different levels.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What if I don’t match well with the mentor?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>You can request a mentor change to ensure the best learning experience.</p>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border-top: 1px solid #ccc;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question .icon {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 0 20px 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg); /* + becomes − */
+}
+
+</style>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = button.parentElement;
+
+      document.querySelectorAll(".faq-item").forEach(faq => {
+        if (faq !== item) faq.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+</script>
+
+   
 
 
 
@@ -1809,136 +1680,6 @@
     </section>
 
 
-
-    <section class="neuropole-wrapper">
-
-      <!-- LEFT IMAGE -->
-      <div class="neuropole-image">
-        <img id="featureImage" src="images/smartpole/sp1.png" alt="Feature Image">
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="neuropole-content">
-
-        <div class="feature active" data-image="images/smartpole/sp1.png">
-          <span>01</span>
-          <h2>Smart Adaptive Lighting</h2>
-          <p>Automatically adjusts brightness based on traffic and environment.</p>
-        </div>
-
-        <div class="feature" data-image="images/smartpole/sp1.png">
-          <span>02</span>
-          <h2>Public WiFi</h2>
-          <p>High-speed connectivity enabling smart city services.</p>
-        </div>
-
-        <div class="feature" data-image="images/smartpole/sp1.png">
-          <span>03</span>
-          <h2>EV Charging</h2>
-          <p>Integrated EV charging solution for urban mobility.</p>
-        </div>
-
-        <div class="feature" data-image="images/smartpole/sp1.png">
-          <span>04</span>
-          <h2>AI CCTV Surveillance</h2>
-          <p>Real-time AI monitoring for enhanced safety.</p>
-        </div>
-
-        <!-- Add till 16 features same way -->
-
-      </div>
-    </section>
-
-    <style>
-      /* body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0f14;
-  color: #fff;
-} */
-
-      .neuropole-wrapper {
-        display: flex;
-        max-width: 1400px;
-        margin: auto;
-      }
-
-      /* LEFT IMAGE */
-      .neuropole-image {
-        position: sticky;
-        top: 0;
-        width: 45%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .neuropole-image img {
-        height: 520px;
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      }
-
-      /* RIGHT CONTENT */
-      .neuropole-content {
-        width: 55%;
-        padding: 100px 60px;
-      }
-
-      /* EACH FEATURE */
-      .feature {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        opacity: 0.3;
-        transition: opacity 0.4s ease;
-      }
-
-      .feature.active {
-        opacity: 1;
-      }
-
-      .feature span {
-        color: #4fc3f7;
-        letter-spacing: 2px;
-        font-size: 14px;
-      }
-
-      .feature h2 {
-        font-size: 40px;
-        margin: 12px 0;
-      }
-
-      .feature p {
-        font-size: 18px;
-        max-width: 420px;
-        opacity: 0.85;
-      }
-
-      /* MOBILE */
-      @media(max-width: 768px) {
-        .neuropole-wrapper {
-          flex-direction: column;
-        }
-
-        .neuropole-image {
-          position: relative;
-          width: 100%;
-          height: 60vh;
-        }
-
-        .neuropole-content {
-          width: 100%;
-          padding: 40px 20px;
-        }
-
-        .feature {
-          min-height: auto;
-          margin-bottom: 80px;
-        }
-      }
-    </style>
 
 
 
