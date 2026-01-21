@@ -1,0 +1,158 @@
+<section class="neuropole-wrapper">
+
+  <!-- LEFT IMAGE -->
+  <div class="neuropole-image">
+    <img id="featureImage" src="images/smartpole/sp1.png" alt="Feature Image">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="neuropole-content">
+
+    <div class="feature active" data-image="images/smartpole/sp1.png">
+      <span>01</span>
+      <h2>Smart Adaptive Lighting</h2>
+      <p>Automatically adjusts brightness based on traffic and environment.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>02</span>
+      <h2>Public WiFi</h2>
+      <p>High-speed connectivity enabling smart city services.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>03</span>
+      <h2>EV Charging</h2>
+      <p>Integrated EV charging solution for urban mobility.</p>
+    </div>
+
+    <div class="feature" data-image="images/smartpole/sp1.png">
+      <span>04</span>
+      <h2>AI CCTV Surveillance</h2>
+      <p>Real-time AI monitoring for enhanced safety.</p>
+    </div>
+
+    <!-- Add till 16 features same way -->
+
+  </div>
+</section>
+
+<style>
+  /* body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #fff;
+} */
+
+.neuropole-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* LEFT IMAGE */
+.neuropole-image {
+  position: sticky;
+  top: 0;
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neuropole-image img {
+  height: 520px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* RIGHT CONTENT */
+.neuropole-content {
+  width: 55%;
+  padding: 100px 60px;
+}
+
+/* EACH FEATURE */
+.feature {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.feature.active {
+  opacity: 1;
+}
+
+.feature span {
+  color: #4fc3f7;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.feature h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.feature p {
+  font-size: 18px;
+  max-width: 420px;
+  opacity: 0.85;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .neuropole-wrapper {
+    flex-direction: column;
+  }
+
+  .neuropole-image {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .neuropole-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .feature {
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+}
+
+</style>
+
+<script>
+const features = document.querySelectorAll('.feature');
+const image = document.getElementById('featureImage');
+
+window.addEventListener('scroll', () => {
+  features.forEach(feature => {
+    const rect = feature.getBoundingClientRect();
+    const center = window.innerHeight / 2;
+
+    if (rect.top < center && rect.bottom > center) {
+      feature.classList.add('active');
+
+      const newImg = feature.dataset.image;
+      if (!image.src.includes(newImg)) {
+        image.style.opacity = 0;
+        setTimeout(() => {
+          image.src = newImg;
+          image.style.opacity = 1;
+        }, 200);
+      }
+
+    } else {
+      feature.classList.remove('active');
+    }
+  });
+});
+</script>

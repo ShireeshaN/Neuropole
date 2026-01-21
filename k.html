@@ -1,0 +1,231 @@
+<div class="allmodules">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:Poppins,sans-serif;}
+
+    .allmodules { width:100%; max-width:1200px; margin:0 auto; }
+
+    .all-frame {
+      width:100%; 
+      height:90vh; 
+      display:flex; 
+      overflow:hidden;  
+      background:#111; 
+      position:relative;
+   
+    }
+
+    /* LEFT SIDEBAR */
+    .sidebar {
+      width:70px;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+      flex-shrink:0;
+    }
+    .sidebar .vertical {
+      writing-mode:vertical-rl; 
+      transform:rotate(180deg); 
+      font-weight:600;
+      font-size:16px;
+    }
+    .sidebar .socials {
+      display:flex; 
+      flex-direction:column; 
+      gap:10px; 
+      font-size:12px;
+    }
+
+    /* HERO */
+    .hero {
+      flex:1;
+      position:relative;
+      background-size:cover;
+      background-position:center;
+      transition: background-image 0.8s ease-in-out;
+    }
+
+    /* NAVIGATION ARROWS */
+    .nav-arrows {
+      position:absolute;
+      top:20px;
+      right:20px;
+      display:flex;
+      gap:10px;
+      z-index:10;
+    }
+    .nav-arrows div {
+      width:35px; 
+      height:35px;
+      background:rgba(255,255,255,0.6);
+      display:flex; 
+      justify-content:center; 
+      align-items:center;
+      cursor:pointer; 
+      font-weight:bold; 
+      color:#000;
+      transition:0.2s;
+     
+    }
+    .nav-arrows div:hover {
+      background:rgba(255,255,255,0.9);
+    }
+
+    /* RIGHT PANEL */
+    .right {
+      width:320px;
+      background:#1b1b1b;
+      color:#fff;
+      padding:30px 20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      flex-shrink:0;
+    }
+    .right .details h4 {
+      font-size:14px; 
+      opacity:0.7; 
+      margin-bottom:15px;
+    }
+    .right .details p {
+      font-size:14px; 
+      opacity:0.8; 
+      margin-bottom:6px;
+    }
+    .right .details a {
+      color:#fff; 
+      text-decoration:none; 
+      border-bottom:1px solid #fff; 
+      margin-top:15px; 
+      display:inline-block;
+    }
+
+    /* THUMBNAILS */
+    .thumbnails {
+      display:flex;
+      gap:10px;
+      overflow-x:auto;
+      padding-top:10px;
+      scroll-behavior:smooth;
+    }
+    .thumbnails::-webkit-scrollbar {display:none;}
+    .thumbnails img {
+      width:60px; 
+      height:60px;
+      object-fit:cover;
+      opacity:0.5;
+      cursor:pointer;
+      transition:0.3s;
+  
+    }
+    .thumbnails img.active {
+      opacity:1; 
+      transform:scale(1.05); 
+      outline:2px solid #fff;
+    }
+
+    /* MOBILE - KEEP SAME AS DESKTOP */
+    @media(max-width:900px){
+      .all-frame { flex-direction:row; height:90vh; }
+      .sidebar { width:70px; flex-direction:column; }
+      .hero { height:auto; flex:1; }
+      .right { width:320px; }
+    }
+  </style>
+
+  <div class="all-frame">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <div class="vertical">NEUROPOLE</div>
+      <div class="socials">
+        <span>P</span>
+        <span>O</span>
+        <span>L</span>
+        <span>E</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero" id="hero"></div>
+
+    <!-- NAVIGATION ARROWS -->
+    <div class="nav-arrows">
+      <div id="prev">&#8592;</div>
+      <div id="next">&#8594;</div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+      <div class="details" id="details">
+        <h4>Project Details</h4>
+        <p id="location">City: Smart City</p>
+        <p id="year">Year: 2026</p>
+        <p id="type">Type: Smart Pole Features</p>
+        <a href="#" id="link">See Feature</a>
+      </div>
+
+      <!-- THUMBNAILS -->
+      <div class="thumbnails" id="thumbs"></div>
+    </div>
+
+  </div>
+
+  <script>
+    const slides=[
+      {title:"Smart Adaptive Lighting", image:"images/smartpole/sp2.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features1"},
+      {title:"Air Quality Sensor", image:"images/img_2.jpg", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features1"},
+      {title:"Emergency SOS", image:"images/smartpole/sp1.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features2"},
+      {title:"Device Charging", image:"images/img_10.jpg", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Environmental Sensors", image:"images/img_5.jpg", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features2"},
+      {title:"Digital Display", image:"images/img_5.jpg", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Lighting Control", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"PA Speaker", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Renewable Power", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"RGB Display", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Motion Detection", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Public Wi-Fi", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Intercom", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"Touch Screen", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"AI Voice", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+      {title:"AI Camera", image:"images/smartpole/sp3.png", location:"City: Smart City", year:"Year: 2026", type:"Type: Smart Pole Features"},
+    ];
+
+    let index=0;
+    const hero=document.getElementById("hero");
+    const thumbs=document.getElementById("thumbs");
+    const locationEl=document.getElementById("location");
+    const yearEl=document.getElementById("year");
+    const typeEl=document.getElementById("type");
+
+    /* CREATE THUMBNAILS */
+    slides.forEach((s,i)=>{
+      const img=document.createElement("img");
+      img.src=s.image;
+      img.onclick=()=>{ index=i; update(); };
+      thumbs.appendChild(img);
+    });
+    const thumbImgs=document.querySelectorAll(".thumbnails img");
+
+    /* UPDATE FUNCTION */
+    function update(){
+      hero.style.backgroundImage=`url(${slides[index].image})`;
+      locationEl.textContent=slides[index].location;
+      yearEl.textContent=slides[index].year;
+      typeEl.textContent=slides[index].type;
+      thumbImgs.forEach((t,i)=> t.classList.toggle("active",i===index));
+      thumbImgs[index].scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+    }
+
+    /* ARROW NAVIGATION */
+    document.getElementById("prev").onclick=()=>{ index=(index-1+slides.length)%slides.length; update();}
+    document.getElementById("next").onclick=()=>{ index=(index+1)%slides.length; update();}
+
+    /* AUTO PLAY */
+    setInterval(()=>{ index=(index+1)%slides.length; update(); },6000);
+
+    update();
+  </script>
+</div>

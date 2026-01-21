@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Steps – NeuroPole</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+  color:#111;
+}
+
+.wrapper{
+  width:100%;
+  min-height:100vh;
+  padding:70px 80px;
+  position:relative;
+}
+
+/* ===== Title ===== */
+.header h1{
+  font-size:44px;
+  font-weight:600;
+}
+
+.header p{
+  margin-top:6px;
+  color:#777;
+}
+
+/* ===== Hanging Section ===== */
+.hanging{
+  position:absolute;
+  top:90px;
+  right:120px;
+  width:520px;
+  height:260px;
+}
+
+/* Common ball */
+.ball{
+  position:absolute;
+  text-align:center;
+}
+
+.ball .circle{
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:600;
+  color:#fff;
+  z-index:2;
+}
+
+/* ===== FIRST BALL (SLANTED – FIXED) ===== */
+.ball.one{
+  left:-130px;
+  top:90px;
+}
+
+.ball.one::before{
+  content:'';
+  position:absolute;
+  width:1px;
+  height:200px;
+  background:#bdbdbd;
+  top:-200px;
+  left:50%;
+  transform:rotate(22deg);
+  transform-origin:bottom;
+}
+
+.ball.one .circle{
+  background:#e0e0e0;
+  color:#666;
+}
+
+/* ===== STRAIGHT BALLS ===== */
+.ball.two{ left:160px; }
+.ball.three{ left:260px; }
+.ball.four{ left:360px; }
+
+.ball.two,
+.ball.three,
+.ball.four{
+  top:90px;
+}
+
+.ball.two::before,
+.ball.three::before,
+.ball.four::before{
+  content:'';
+  position:absolute;
+  width:1px;
+  height:200px;
+  background:#bdbdbd;
+  top:-200px;
+  left:50%;
+}
+
+.ball.two .circle{ background:#9e9e9e; }
+.ball.three .circle{ background:#5f5f63; }
+.ball.four .circle{ background:#111; }
+
+/* ===== Bottom Content ===== */
+.content{
+  position:absolute;
+  bottom:90px;
+  left:80px;
+  right:80px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+}
+
+.box h3{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.box p{
+  font-size:14px;
+  color:#666;
+  line-height:1.6;
+}
+
+/* ===================== */
+/* ===== MOBILE VIEW ===== */
+/* ===================== */
+@media(max-width:900px){
+
+  .wrapper{
+    padding:50px 24px;
+  }
+
+  .hanging{
+    position:relative;
+    top:40px;
+    right:auto;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .ball{
+    position:relative;
+    left:0 !important;
+    top:0 !important;
+  }
+
+  .ball::before{
+    height:120px !important;
+    top:-120px !important;
+    transform:none !important;
+  }
+
+  .content{
+    position:relative;
+    bottom:auto;
+    left:auto;
+    right:auto;
+    margin-top:60px;
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .header h1{
+    font-size:34px;
+  }
+
+  .hanging{
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+  }
+
+  .ball::before{
+    height:80px !important;
+    top:-80px !important;
+  }
+
+  .content{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="wrapper">
+
+  <div class="header">
+    <h1>Our Steps</h1>
+    <p>Great Title is Here</p>
+  </div>
+
+  <div class="hanging">
+    <div class="ball one"><div class="circle">1</div></div>
+    <div class="ball two"><div class="circle">2</div></div>
+    <div class="ball three"><div class="circle">3</div></div>
+    <div class="ball four"><div class="circle">4</div></div>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <h3>Vision</h3>
+      <p>Building intelligent city infrastructure that seamlessly connects technology and sustainability.</p>
+    </div>
+    <div class="box">
+      <h3>Mission</h3>
+      <p>Delivering smart poles with EV charging, lighting, sensing and communication solutions.</p>
+    </div>
+    <div class="box">
+      <h3>Integration</h3>
+      <p>Combining IoT, AI, cameras, displays, Wi-Fi and power systems into one platform.</p>
+    </div>
+    <div class="box">
+      <h3>Impact</h3>
+      <p>Creating safer, greener and smarter cities for future generations.</p>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

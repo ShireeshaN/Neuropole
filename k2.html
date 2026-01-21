@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>GO.ARCH Layout</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background:#111;
+  color:#fff;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about{
+  padding:80px 8%;
+}
+
+.about h2{
+  text-align:center;
+  letter-spacing:3px;
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:60px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-text p{
+  font-size:13px;
+  line-height:1.8;
+  opacity:0.7;
+}
+
+.specs h4{
+  font-size:12px;
+  letter-spacing:2px;
+  opacity:0.6;
+  margin-bottom:20px;
+}
+
+.specs ul{
+  list-style:none;
+}
+
+.specs li{
+  margin-bottom:12px;
+  font-size:13px;
+  letter-spacing:1px;
+  position:relative;
+  padding-left:15px;
+}
+
+.specs li::before{
+  content:"";
+  width:6px;
+  height:6px;
+  background:#fff;
+  border-radius:50%;
+  position:absolute;
+  left:0;
+  top:6px;
+}
+
+.about-image img{
+  width:100%;
+  border-radius:4px;
+}
+
+/* ===== PROJECTS ===== */
+.projects{
+  padding:80px 6% 100px;
+}
+
+.projects h3{
+  text-align:center;
+  font-size:14px;
+  letter-spacing:3px;
+  opacity:0.7;
+  margin-bottom:60px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+}
+
+.project-card{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.project-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 1s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
+.project-info{
+  position:absolute;
+  top:20px;
+  left:20px;
+}
+
+.project-info h4{
+  font-size:12px;
+  letter-spacing:1px;
+  opacity:0.9;
+}
+
+.project-line{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  height:120px;
+  width:2px;
+  background:repeating-linear-gradient(
+    to bottom,
+    #fff,
+    #fff 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity:0.6;
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .project-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>ABOUT GO.ARCH</h2>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>
+        We turn ideas into works of art. Our team of architects and designers
+        creates inspiring spaces with modern aesthetics and timeless value.
+      </p>
+    </div>
+
+    <div class="specs reveal">
+      <h4>OUR SPECIALIZATION</h4>
+      <ul>
+        <li>ARCHITECTURE</li>
+        <li>INTERIORS</li>
+        <li>PLANNING</li>
+      </ul>
+    </div>
+
+    <div class="about-image reveal">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects">
+  <h3>OUR PROJECTS</h3>
+
+  <div class="project-grid">
+    <div class="project-card reveal">
+      <img src="https://images.unsplash.com/photo-1505842465776-3ac269e0c2df">
+      <div class="project-info">
+        <h4>RESIDENTIAL CARE<br>IN PARIS</h4>
+      </div>
+      <div class="project-line"></div>
+    </div>
+
+    <div class="project-card reveal">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+      <div class="project-info">
+        <h4>CONCERT HALL<br>IN NEW YORK</h4>
+      </div>
+      <div class="project-line"></div>
+    </div>
+
+    <div class="project-card reveal">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+      <div class="project-info">
+        <h4>MODERN HOTEL<br>IN LONDON</h4>
+      </div>
+      <div class="project-line"></div>
+    </div>
+
+    <div class="project-card reveal">
+      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+      <div class="project-info">
+        <h4>MODERN HOTEL<br>IN LONDON</h4>
+      </div>
+      <div class="project-line"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(r=>observer.observe(r));
+</script>
+
+</body>
+</html>
