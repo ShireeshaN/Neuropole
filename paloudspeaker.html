@@ -221,180 +221,147 @@
         }, 500); // fade duration matches CSS transition
       }, 3000); // 3 seconds per word
     </script>
+<!-- content start -->
 
-    <!-- content start -->
+<div class="np-minimal-section">
 
-    <div class="np-minimal-section">
+  <style>
+    .np-minimal-section {
+      width: 100%;
+      background: #f2f3f5;
+      padding: 40px 4%; /* reduced padding */
+      color: #222;
+      font-family: "Inter", sans-serif;
+    }
 
-      <style>
-        .np-minimal-section {
-          width: 100%;
-          background: #f2f3f5;
-          padding: 90px 6%;
-          color: #222;
-          font-family: "Inter", sans-serif;
-        }
+    /* HEADING */
+    .np-heading {
+      margin-bottom: 25px;
+    }
 
-        /* HEADING */
-        .np-heading {
-          margin-bottom: 40px;
-        }
+    .np-heading h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 1px;
+    }
 
-        .np-heading h1 {
-          font-size: 44px;
-          font-weight: 700;
-          color: #111;
-          letter-spacing: 1px;
-        }
+    /* IMAGE */
+    .np-image {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* responsive instead of fixed height */
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
 
-        /* IMAGE */
-        .np-image {
-          width: 100%;
-          height: 520px;
-          margin-bottom: 45px;
-          overflow: hidden;
+    .np-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-        }
+    /* CONTENT */
+    .np-points {
+      max-width: 900px;
+    }
 
-        .np-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+    .np-points ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        /* CONTENT */
-        .np-points {
-          max-width: 900px;
-        }
+    .np-points ul li {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      padding-left: 22px;
+      position: relative;
 
-        .np-points h3 {
-          font-size: 24px;
-          font-weight: 600;
-          margin-bottom: 22px;
-          color: #1a1a1a;
-        }
+      transition: 
+        color 0.4s ease,
+        font-weight 0.4s ease,
+        transform 0.4s ease;
+    }
 
-        .np-points ul {
-          list-style: none;
-          padding-left: 0;
-        }
+    .np-points ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #111;
+      font-size: 18px;
+    }
 
-        .np-points ul li {
-          font-size: 16px;
-          color: #444;
-          line-height: 1.8;
-          margin-bottom: 14px;
-          padding-left: 22px;
-          position: relative;
-        }
+    /* ACTIVE ITEM */
+    .np-points ul li.active {
+      color: #111;
+      font-weight: 600;
+      transform: translateX(6px);
+    }
 
-        .np-points ul li::before {
-          content: "•";
-          position: absolute;
-          left: 0;
-          top: 0;
-          color: #111;
-          font-size: 20px;
-          line-height: 1.2;
-        }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .np-heading h1 {
+        font-size: 28px;
+      }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-          .np-heading h1 {
-            font-size: 30px;
-          }
+      .np-minimal-section {
+        padding: 30px 4%;
+      }
 
-          .np-image {
-            height: 320px;
-          }
+      .np-image {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
 
-          .np-points h3 {
-            font-size: 20px;
-          }
+  <!-- HEADING -->
+  <div class="np-heading">
+    <h1>PA Loudspeaker</h1>
+  </div>
 
-          .np-minimal-section {
-            padding: 60px 5%;
-          }
-        }
+  <!-- IMAGE -->
+  <div class="np-image">
+    <img src="images/features/PA Loudspeaker.png" alt="PA Loudspeaker">
+  </div>
 
-        /* LIST ANIMATION */
-.np-points ul li {
-  transition: 
-    color 0.4s ease,
-    font-weight 0.4s ease,
-    transform 0.4s ease,
-    background 0.4s ease;
-}
+  <!-- POINT CONTENT -->
+  <div class="np-points">
+    <ul>
+      <li>Broadcasts emergency or public messages</li>
+      <li>High-quality audio clarity and range</li>
+      <li>Supports voice announcements and alerts</li>
+      <li>Connects to ICCC or mobile command unit</li>
+      <li>Weatherproof and tamper-resistant design</li>
+      <li>Promotes eco-friendly urban transport</li>
+      <li>Supports public and private charging setups</li>
+      <li>Reduces air & noise pollution</li>
+      <li>Compatible with multiple EV models</li>
+      <li>Boosts sustainability image of the city</li>
+    </ul>
+  </div>
 
-/* ACTIVE / HIGHLIGHTED STATE */
-.np-points ul li.active {
-  color: #111;
-  font-weight: 600;
-  transform: translateX(6px);
-}
+</div>
 
-.np-points ul li.active::before {
-  color: #000;
-}
-
-      </style>
-
-      <!-- HEADING -->
-      <div class="np-heading">
-        <h1>PA Loudspeaker</h1>
-      </div>
-
-      <!-- IMAGE -->
-      <div class="np-image">
-        <img src="images/smartpole/sp2.png" alt="NeuroPole EV Charger">
-      </div>
-
-      <!-- POINT CONTENT -->
-      <div class="np-points">
-        <!-- <h3>NeuroPole stands at the intersection of technology and urban intelligence</h3> -->
-        <ul>
-          <li>Broadcasts emergency or public messages</li>
-          <li>High-quality audio clarity and range</li>
-          <li>Supports voice announcements and alerts</li>
-          <li>Connects to ICCC or mobile command unit</li>
-
-          <li>Weatherproof and tamper-resistant design</li>
-          <li>Promotes eco-friendly urban transport</li>
-          <li>Supports public and private charging setups</li>
-          <li>Reduces air & noise pollution</li>
-          <li>Compatible with multiple EV models</li>
-          <li>Boosts sustainability image of the city
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <script>
+<script>
   const points = document.querySelectorAll('.np-points ul li');
   let currentIndex = 0;
 
   function highlightNextPoint() {
-    // Remove active from all
     points.forEach(point => point.classList.remove('active'));
-
-    // Add active to current
     points[currentIndex].classList.add('active');
 
-    // Move to next
     currentIndex++;
-
-    // Loop back
-    if (currentIndex >= points.length) {
-      currentIndex = 0;
-    }
+    if (currentIndex >= points.length) currentIndex = 0;
   }
 
-  // Start animation
   setInterval(highlightNextPoint, 1200);
 </script>
 
-    <!-- content end -->
+<!-- content end -->
 
     <!-- content end -->
 

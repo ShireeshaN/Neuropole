@@ -43,7 +43,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-
+  
   
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
@@ -53,7 +53,7 @@
           <div class="col-11 col-xl-2">
             <h1 class="mb-0 site-logo">
               <a href="index.html" class="mb-0">
-                <img src="images/logo.png" alt="Your Company Logo" class="site-logo-img">
+                <img src="images/logo2.png" alt="Your Company Logo" class="site-logo-img">
               </a>
             </h1>
           </div>
@@ -104,7 +104,7 @@
     </header>
 
 <!-- banner start -->
-   <div class="neuropolebans">
+<div class="neuropolebans">
   <div class="container">
     <div class="row align-items-center">
       
@@ -119,15 +119,16 @@
       </div>
 
       <!-- RIGHT POLE IMAGE -->
-      <div class="col-md-5 text-end pole-wrap">
+      <!-- <div class="col-md-5 text-end pole-wrap">
         <img src="images/smartpole/poles.png" alt="NeuroPole" class="pole-img">
-      </div>
+      </div> -->
 
     </div>
   </div>
 </div>
-    <style>
-    /* =========================
+
+<style>
+/* =========================
    NeuroPole Banner
 ========================= */
 
@@ -135,8 +136,23 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: rgb(144, 142, 142); /* NO background */
+  background: url('images/main banner.png') center/cover no-repeat;
   overflow: hidden;
+  position: relative;
+}
+
+/* Overlay */
+/* .neuropolebans::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+/* Keep content above overlay */
+.neuropolebans .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Text styles */
@@ -193,24 +209,26 @@
     font-size: 1.8rem;
   }
 }
+</style>
 
-    </style>
-    <script>
-       const words = ["Neuroscience", "Neuro Technology", "AI Intelligence"];
-  let index = 0;
-  const wordContainer = document.querySelector('.rotating-words');
+<script>
+const words = ["Neuroscience", "Neuro Technology", "AI Intelligence"];
+let index = 0;
+const wordContainer = document.querySelector('.rotating-words');
 
-  wordContainer.textContent = words[0];
+wordContainer.textContent = words[0];
 
-  setInterval(() => {
-    index = (index + 1) % words.length;
-    wordContainer.style.opacity = 0;
-    setTimeout(() => {
-      wordContainer.textContent = words[index];
-      wordContainer.style.opacity = 1;
-    }, 500);
-  }, 3000);
-    </script>
+setInterval(() => {
+  index = (index + 1) % words.length;
+  wordContainer.style.opacity = 0;
+
+  setTimeout(() => {
+    wordContainer.textContent = words[index];
+    wordContainer.style.opacity = 1;
+  }, 500);
+
+}, 3000);
+</script>
 
 <!-- banner end -->
 
@@ -1002,60 +1020,6 @@
 
 
 
-<!-- animione start -->
-<div class="animione">
-  <style>
-    .animione {
-      width: 100%;
-      height: 100vh;          /* Full screen */
-      background: transparent; /* No background */
-      font-family: Poppins, sans-serif;
-    }
-
-    .animione-wrap {
-      height: 100%;
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .animione-box {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .animione-box img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain; /* FULL image visible */
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      .animione-wrap {
-        flex-direction: column;
-      }
-    }
-  </style>
-
-  <div class="animione-wrap">
-    <div class="animione-box">
-      <img src="images/smartpole/poles.png" alt="">
-    </div>
-
-    <div class="animione-box">
-      <img src="images/smartpole/poles.png" alt="">
-    </div>
-
-    <div class="animione-box">
-      <img src="images/smartpole/poles.png" alt="">
-    </div>
-  </div>
-</div>
-
-<!-- animione end -->
 
 
 
